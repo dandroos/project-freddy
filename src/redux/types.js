@@ -1,0 +1,1 @@
+export const SET_FONT_LOADED = "SET_FONT_LOADED"

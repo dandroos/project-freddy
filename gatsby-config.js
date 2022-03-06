@@ -1,3 +1,5 @@
+const { themeConfig } = require("./src/theme")
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Starter`,
@@ -26,7 +28,7 @@ module.exports = {
         name: `dandrews-developer`,
         short_name: `dandrews`,
         start_url: `/`,
-        background_color: `#663399`,
+        background_color: themeConfig.palette.main,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,

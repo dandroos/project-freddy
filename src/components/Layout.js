@@ -18,6 +18,7 @@ const Layout = ({ dispatch, location, children }) => {
       }, loadFont)
     }
     loadFont()
+    //eslint-disable-next-line
   }, [])
   return (
     <Box display="flex" minHeight="100vh" flexDirection="column">

@@ -1,11 +1,11 @@
-import { Box } from "@mui/material"
+import { Box, useMediaQuery, useTheme } from "@mui/material"
 import React, { useEffect } from "react"
 import Footer from "./Footer"
 import Header from "./Header"
 import FontFaceObserver from "fontfaceobserver"
 import { themeConfig } from "../theme"
 import { connect } from "react-redux"
-import { setFontLoaded } from "../redux/actions"
+import { setFontLoaded, setIsMobile } from "../redux/actions"
 import { AnimatePresence, motion } from "framer-motion"
 
 const Layout = ({ dispatch, location, children }) => {
@@ -20,6 +20,14 @@ const Layout = ({ dispatch, location, children }) => {
     loadFont()
     //eslint-disable-next-line
   }, [])
+
+  const isMobile = useMediaQuery(useTheme().breakpoints.down("md"))
+
+  useEffect(() => {
+    dispatch(setIsMobile(isMobile))
+    //eslint-disable-next-line
+  }, [isMobile])
+
   return (
     <Box display="flex" minHeight="100vh" flexDirection="column">
       <Box component="header" py={2}>

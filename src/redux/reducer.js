@@ -1,7 +1,8 @@
-import { SET_FONT_LOADED } from "./types"
+import { SET_FONT_LOADED, SET_IS_MOBILE } from "./types"
 
 const initialState = {
   fontLoaded: false,
+  isMobile: null,
 }
 
 export const reducer = (state = initialState, { type, payload }) => {
@@ -11,6 +12,9 @@ export const reducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case SET_FONT_LOADED:
       newState.fontLoaded = payload
+      break
+    case SET_IS_MOBILE:
+      newState.isMobile = payload
       break
     default:
       break

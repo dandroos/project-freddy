@@ -2,8 +2,9 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { Typography } from "@mui/material"
 import { StaticImage } from "gatsby-plugin-image"
+import { connect } from "react-redux"
 
-const Header = () => {
+const Header = ({ isMobile }) => {
   const { title } = useStaticQuery(graphql`
     {
       site {
@@ -26,8 +27,15 @@ const Header = () => {
       <Typography variant="h1" align="center">
         {title}
       </Typography>
+      <Typography variant="caption" display="block" align="center">
+        Showing mobile layout: <strong>{isMobile.toString()}</strong>
+      </Typography>
     </>
   )
 }
 
-export default Header
+const mapStateToProps = state => ({
+  isMobile: state.isMobile,
+})
+
+export default connect(mapStateToProps)(Header)

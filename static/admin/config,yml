@@ -4,37 +4,37 @@ backend:
   branch: master
 media_folder: content/site_images
 collections:
-  - name: articles
-    label: Articles
-    label_singular: Article
-    folder: content/articles
-    create: true
-    editor:
-      preview: false
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    path: "{{slug}}/index"
-    media_folder: ""
-    summary: "{{day}}/{{month}}/{{year}} - {{title}}"
-    fields:
-      - label: Make public?
-        name: publish
-        widget: boolean
-        default: true
-      - label: Title
-        name: title
-      - label: Featured Image
-        name: featured_image
-        widget: image
-        choose_url: false
-      - label: Date
-        name: date
-        widget: datetime
-      - label: Body
-        name: body
-        widget: markdown
-        buttons: ["bold", "italic"]
-        editor_components: ["image"]
-        modes: ["rich_text"]
+  # - name: articles
+  #   label: Articles
+  #   label_singular: Article
+  #   folder: content/articles
+  #   create: true
+  #   editor:
+  #     preview: false
+  #   slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  #   path: "{{slug}}/index"
+  #   media_folder: ""
+  #   summary: "{{day}}/{{month}}/{{year}} - {{title}}"
+  #   fields:
+  #     - label: Make public?
+  #       name: publish
+  #       widget: boolean
+  #       default: true
+  #     - label: Title
+  #       name: title
+  #     - label: Featured Image
+  #       name: featured_image
+  #       widget: image
+  #       choose_url: false
+  #     - label: Date
+  #       name: date
+  #       widget: datetime
+  #     - label: Body
+  #       name: body
+  #       widget: markdown
+  #       buttons: ["bold", "italic"]
+  #       editor_components: ["image"]
+  #       modes: ["rich_text"]
   # - label: Pages
   #   name: pages
   #   media_folder: ./site_images

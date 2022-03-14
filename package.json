@@ -45,7 +45,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "develop": "concurrently \"npx netlify-cms-proxy-server\" \"gatsby develop -H 0.0.0.0\"",
+    "develop": "concurrently \"npx netlify-cms-proxy-server\" \"gatsby develop\"",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",

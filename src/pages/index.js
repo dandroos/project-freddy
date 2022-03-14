@@ -1,15 +1,39 @@
-import { Button, Container, Grid, Typography } from "@mui/material"
+import { Box, Button, Container, Grid, Typography } from "@mui/material"
 import { BookOpen, FrequentlyAskedQuestions } from "mdi-material-ui"
 import React from "react"
-import { Link } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import { connect } from "react-redux"
 
-const Index = () => {
+const Index = ({ isMobile }) => {
+  const { description } = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          description
+        }
+      }
+    }
+  `).site.siteMetadata
   return (
     <Container maxWidth="sm">
-      <Typography paragraph>
-        Gatsby is the fast and flexible framework that makes building websites
-        with any CMS, API, or database fun again. Build and deploy headless
-        websites that drive more traffic, convert better, and earn more revenue!
+      <Box display="flex" justifyContent="center" sx={{ mb: 2 }}>
+        {isMobile ? (
+          <StaticImage
+            src="../images/logo.png"
+            width={180}
+            style={{ marginBottom: "15px" }}
+          />
+        ) : (
+          <StaticImage
+            src="../images/logo.png"
+            width={380}
+            style={{ marginBottom: "15px" }}
+          />
+        )}
+      </Box>
+      <Typography variant="lead" paragraph>
+        {description}
       </Typography>
       <Grid container spacing={1}>
         <Grid item xs={12} md={6}>
@@ -39,4 +63,8 @@ const Index = () => {
   )
 }
 
-export default Index
+const stp = s => ({
+  isMobile: s.isMobile,
+})
+
+export default connect(stp)(Index)

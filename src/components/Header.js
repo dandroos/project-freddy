@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { Typography } from "@mui/material"
 import { StaticImage } from "gatsby-plugin-image"
 import { connect } from "react-redux"
+import Nav from "./Nav"
 
 const Header = ({ isMobile }) => {
   const { title } = useStaticQuery(graphql`
@@ -16,7 +17,8 @@ const Header = ({ isMobile }) => {
   `).site.siteMetadata
   return (
     <>
-      <StaticImage
+      <Nav />
+      {/* <StaticImage
         src="../images/gatsby-icon.png"
         alt="Gatsby logo"
         width={150}
@@ -27,9 +29,11 @@ const Header = ({ isMobile }) => {
       <Typography variant="h1" align="center">
         {title}
       </Typography>
-      <Typography variant="caption" display="block" align="center">
-        Showing mobile layout: <strong>{isMobile.toString()}</strong>
-      </Typography>
+      {isMobile && (
+        <Typography variant="caption" display="block" align="center">
+          Showing mobile layout: <strong>{isMobile.toString()}</strong>
+        </Typography>
+      )} */}
     </>
   )
 }

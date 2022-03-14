@@ -1,0 +1,5 @@
+@font-face {
+  font-family: "forte";
+  src: url("forte.ttf") format("truetype"), url("forte.woff") format("woff"),
+    url("forte.woff2") format("woff2");
+}

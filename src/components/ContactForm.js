@@ -1,8 +1,10 @@
-import { Typography, Button, Grid, TextField } from "@mui/material"
+import { Typography, Button, Grid, TextField, Link } from "@mui/material"
 import { Send } from "mdi-material-ui"
 import React, { useState } from "react"
+import { connect } from "react-redux"
+import { setBookingForm } from "../redux/actions"
 
-const ContactForm = () => {
+const ContactForm = ({ dispatch }) => {
   const [fields, setFields] = useState({
     nombre: "",
     email: "",
@@ -66,8 +68,14 @@ const ContactForm = () => {
   return (
     <>
       <Typography gutterBottom>
-        Si lo prefiere, puede ponerse en contacto con nosotros mediante el
-        siguiente formulario
+        Si desea ponerse en contacto con nosotros para reservar una clase,{" "}
+        <Link
+          onClick={() => dispatch(setBookingForm({ isOpen: true }))}
+          underline="hover"
+        >
+          haga clic aquí
+        </Link>
+        . Alternativamente, utilice el siguiente formulario.
       </Typography>
       <form
         name="contact"
@@ -125,4 +133,4 @@ const ContactForm = () => {
   )
 }
 
-export default ContactForm
+export default connect()(ContactForm)

@@ -1,0 +1,264 @@
+local_backend: true
+backend:
+  name: git-gateway
+  branch: master
+media_folder: content/site_images
+collections:
+  # - name: articles
+  #   label: Articles
+  #   label_singular: Article
+  #   folder: content/articles
+  #   create: true
+  #   editor:
+  #     preview: false
+  #   slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  #   path: "{{slug}}/index"
+  #   media_folder: ""
+  #   summary: "{{day}}/{{month}}/{{year}} - {{title}}"
+  #   fields:
+  #     - label: Make public?
+  #       name: publish
+  #       widget: boolean
+  #       default: true
+  #     - label: Title
+  #       name: title
+  #     - label: Featured Image
+  #       name: featured_image
+  #       widget: image
+  #       choose_url: false
+  #     - label: Date
+  #       name: date
+  #       widget: datetime
+  #     - label: Body
+  #       name: body
+  #       widget: markdown
+  #       buttons: ["bold", "italic"]
+  #       editor_components: ["image"]
+  #       modes: ["rich_text"]
+  # - label: FAQs
+  #   name: faqs
+  #   editor:
+  #     preview: false
+  #   files:
+  #     - label: 
+  # - label: Courses
+  #   name: courses
+  #   editor:
+  #     preview: false
+  #   files:
+  #     - label: Groups 
+  #       name: groups
+  #       file: content/courses/groups.md
+  #       fields:
+  #         - label: Group courses
+  #           name: course_list
+  #           summary: '{{fields.course.level}} - {{fields.course.days}} - {{fields.course.start_time}}'
+  #           widget: list
+  #           add_to_top: true
+  #           fields:
+  #             - label: Course 
+  #               name: course
+  #               widget: object
+  #               summary: '{{fields.level}} - {{fields.days}} - {{fields.start_time}}'
+  #               fields:
+  #                 - label: Level
+  #                   name: level
+  #                   widget: select
+  #                   options: ["Infantil", "Primaria", "A1", "A2", "B1", "B2", "C1", "C2"]
+  #                 - label: Days
+  #                   name: days
+  #                   widget: select
+  #                   multiple: true
+  #                   options: ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábados", "Domingos"]
+  #                 - label: Start time
+  #                   name: start_time
+  #                   pattern: ['\d\d\d\d', "Must be in 24hr clock format without a colon. e.g. 1345, 0900, etc"]
+  #                   hint: Must be in 24hr clock format without a colon. e.g. 1345, 0900, etc
+  #                   default: "1500"
+  #                 - label: Finish time
+  #                   name: finish_time
+  #                   pattern: ['\d\d\d\d', "Must be in 24hr clock format without a colon. e.g. 1345, 0900, etc"]
+  #                   hint: Must be in 24hr clock format without a colon. e.g. 1345, 0900, etc
+  #                   default: "1550"
+  #                 - label: Minimum age
+  #                   name: min_age
+  #                   widget: number
+  #                   hint: If no limit, select 0.
+  #                 - label: Maximum age
+  #                   name: max_age
+  #                   widget: number
+  #                   hint: If no limit, select 0.
+  #                 - label: "Space(s) available?"
+  #                   name: space
+  #                   widget: select
+  #                   options: ["Yes", "No"]
+  #                   default: ["Yes"]
+  - label: Site content 
+    name: content
+    media_folder: ./site_images
+    public_folder: site_images
+    editor:
+      preview: false
+    files:
+      - label: Header images
+        name: header_images
+        file: content/images.md
+        fields:
+          - label: Cursos (Top) 
+            name: cursos
+            widget: image
+          - label: Cursos (Online)
+            name: cursos_online
+            widget: image
+          - label: Conócenos
+            name: conocenos
+            widget: image
+          - label: FAQ 
+            name: faq
+            widget: image
+          - label: Contáctenos
+            name: contactenos 
+            widget: image
+      - label: Homepage
+        name: homepage
+        file: content/homepage.md
+        fields:
+          - label: Slides
+            name: slides
+            widget: list
+            fields:
+              - label: Slide
+                name: slide
+                widget: object
+                fields:
+                  - label: Image
+                    name: image
+                    widget: image
+                  - label: Heading
+                    name: heading
+                  - label: Subheading
+                    name: subheading
+                  - label: Button
+                    name: button
+                    widget: object
+                    fields:
+                      - label: Text
+                        name: text
+                      - label: Link to...
+                        name: link
+                        widget: select
+                        options:
+                          - {label: Courses page, value: 1}
+                          - {label: About page, value: 2}
+                          - {label: Contact page, value: 3}
+      - label: Courses
+        name: courses
+        file: content/courses.md
+        fields:
+          - label: Courses
+            name: course_list
+            summary: '{{fields.course.level}} - {{fields.course.days}} - {{fields.course.start_time}}'
+            widget: list
+            add_to_top: true
+            fields:
+              - label: Course 
+                name: course
+                widget: object
+                summary: '{{fields.level}} - {{fields.days}} - {{fields.start_time}}'
+                fields:
+                  - label: Level
+                    name: level
+                    widget: select
+                    options: ["Infantil", "Primaria", "A1", "A2", "B1", "B2", "C1", "C2"]
+                  - label: Days
+                    name: days
+                    widget: select
+                    multiple: true
+                    options: ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábados", "Domingos"]
+                  - label: Start time
+                    name: start_time
+                    pattern: ['\d\d\d\d', "Must be in 24hr clock format without a colon. e.g. 1345, 0900, etc"]
+                    hint: Must be in 24hr clock format without a colon. e.g. 1345, 0900, etc
+                    default: "1500"
+                  - label: Finish time
+                    name: finish_time
+                    pattern: ['\d\d\d\d', "Must be in 24hr clock format without a colon. e.g. 1345, 0900, etc"]
+                    hint: Must be in 24hr clock format without a colon. e.g. 1345, 0900, etc
+                    default: "1550"
+                  - label: Minimum age
+                    name: min_age
+                    widget: number
+                    hint: If no limit, select 0.
+                  - label: Maximum age
+                    name: max_age
+                    widget: number
+                    hint: If no limit, select 0.
+                  - label: "Space(s) available?"
+                    name: space
+                    widget: select
+                    options: ["Yes", "No"]
+                    default: ["Yes"]
+          - label: "Online classes text"
+            name: online_classes
+            widget: markdown 
+      - label: FAQs
+        name: faqs
+        file: content/faqs.md
+        fields:
+          - label: FAQs
+            name: faqs
+            widget: list
+            fields:
+              - label: FAQ
+                name: faq
+                widget: object
+                fields:
+                  - label: Question
+                    name: question
+                  - label: Answer
+                    name: answer
+                    widget: text
+      - label: About
+        name: about
+        file: content/about.md
+        fields:
+          - label: Image
+            name: about_image
+            widget: image
+            choose_url: false
+            allow_multiple: false
+          - label: Primary text
+            name: primary_text
+            widget: markdown
+            buttons: ["bold", "italic"]
+            editor_components: []
+            modes: ["rich_text"]
+            hint: This text will appear at the top of the page before the photo
+          - label: Secondary text
+            name: secondary_text
+            widget: markdown
+            buttons: ["bold", "italic"]
+            editor_components: []
+            modes: ["rich_text"]
+            hint: This text will appear after the photo
+  - label: Contact
+    name: contact
+    editor:
+      preview: false
+    files:
+      - label: Phone and Email
+        name: phone_and_email
+        file: content/contact/phone_and_email.md
+        fields:
+          - label: Phone number
+            name: phone_number
+          - label: Email address
+            name: email_address
+      - label: Social media
+        name: social_media
+        file: content/contact/social_media.md
+        fields:
+          - label: Facebook username
+            name: facebook
+          - label: Instagram username
+            name: instagram

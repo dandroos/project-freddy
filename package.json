@@ -12,6 +12,7 @@
     "fontfaceobserver": "^2.1.0",
     "framer-motion": "^6.2.8",
     "gatsby": "^4.9.0",
+    "gatsby-background-image": "^1.6.0",
     "gatsby-plugin-gatsby-cloud": "^4.9.0",
     "gatsby-plugin-image": "^2.9.0",
     "gatsby-plugin-manifest": "^4.9.0",
@@ -21,8 +22,13 @@
     "gatsby-plugin-react-leaflet": "^3.0.3",
     "gatsby-plugin-sharp": "^4.9.0",
     "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-remark-images": "^6.10.0",
+    "gatsby-remark-relative-images-v2": "^0.1.5",
     "gatsby-source-filesystem": "^4.9.0",
+    "gatsby-transformer-remark": "^5.10.0",
     "gatsby-transformer-sharp": "^4.9.0",
+    "gbimage-bridge": "^0.2.1",
+    "html-react-parser": "^1.4.8",
     "leaflet": "^1.7.1",
     "mdi-material-ui": "^7.2.0",
     "moment": "^2.29.1",
@@ -32,8 +38,11 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-leaflet": "^3.2.5",
+    "react-markdown": "^8.0.1",
     "react-redux": "^7.2.6",
-    "redux": "^4.1.2"
+    "react-responsive-carousel": "^3.2.23",
+    "redux": "^4.1.2",
+    "uniqid": "^5.4.0"
   },
   "devDependencies": {
     "concurrently": "^7.0.0",
@@ -45,7 +54,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "develop": "concurrently \"npx netlify-cms-proxy-server\" \"gatsby develop\"",
+    "develop": "concurrently \"npx netlify-cms-proxy-server\" \"gatsby clean && gatsby develop -H 0.0.0.0\"",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",

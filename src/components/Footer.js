@@ -1,7 +1,6 @@
 import {
   Box,
   Container,
-  Grid,
   Link,
   Paper,
   Typography,
@@ -11,7 +10,6 @@ import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import { connect } from "react-redux"
 import LocationAndSchedule from "./LocationAndSchedule"
-import LocationMap from "./LocationMap"
 
 const Footer = ({ isMobile }) => {
   const { title } = useStaticQuery(graphql`
@@ -38,26 +36,7 @@ const Footer = ({ isMobile }) => {
     >
       <Container>
         <LocationAndSchedule footer />
-        {/* <Grid
-          container
-          alignItems="center"
-          sx={{ backgroundColor: theme.palette.secondary.main }}
-        >
-          <Grid item xs={12} md={6}>
-            <LocationMap />
-          </Grid>
-          <Grid item xs={12} md={6} sx={{ py: isMobile ? 3 : 0 }}>
-            <Typography variant="h5">{title}</Typography>
-            <Typography>Calle Alcades Mayores 1 </Typography>
-            <Typography>Local 6</Typography>
-            <Typography>Majada Marcial</Typography>
-            <Typography>Puerto del Rosario, 35600</Typography>
-            <Typography gutterBottom>Fuerteventura</Typography>
-            <Typography variant="h6">Horario</Typography>
-            <Typography>Lunes a Jueves: 16:00 - 19:00</Typography>
-          </Grid>
-        </Grid> */}
-        <Box p={1}>
+        <Box mt={1}>
           <Typography variant="caption" display="block">
             All content &copy;{" "}
             {(() => {

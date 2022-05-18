@@ -1,26 +1,50 @@
-import React from "react"
-import { Typography, Grid, Button } from "@mui/material"
+import { Button, Grid, Typography } from "@mui/material"
 import { Email, Phone, Whatsapp } from "mdi-material-ui"
+import { graphql, useStaticQuery } from "gatsby"
+
+import React from "react"
 
 const ContactButtons = () => {
+  const { phone_number, email_address } = useStaticQuery(graphql`
+    {
+      file(
+        sourceInstanceName: { eq: "contact" }
+        name: { eq: "phone_and_email" }
+        extension: { eq: "md" }
+      ) {
+        childMarkdownRemark {
+          frontmatter {
+            phone_number
+            email_address
+          }
+        }
+      }
+    }
+  `).file.childMarkdownRemark.frontmatter
+
+  const phoneNumber = `${phone_number.slice(0, 3)} ${phone_number.slice(
+    3,
+    6
+  )} ${phone_number.slice(6, 9)}`
+
   const methods = [
     {
       label: "Llámanos",
-      secondary: "123 456 789",
+      secondary: phoneNumber,
       Icon: Phone,
-      url: "tel:123456789",
+      url: `tel:${phone_number}`,
     },
     {
       label: "WhatsApp",
-      secondary: "123 456 789",
+      secondary: phoneNumber,
       Icon: Whatsapp,
-      url: "https://wa.me/123456789",
+      url: `https://wa.me/${phone_number}`,
     },
     {
       label: "Email",
-      secondary: "elrincondeidiomas20@gmail.com",
+      secondary: email_address,
       Icon: Email,
-      url: "mailto:email@mail.com",
+      url: `mailto:${email_address}`,
     },
   ]
   return (
@@ -29,8 +53,8 @@ const ContactButtons = () => {
         Puede contactarnos a través de los siguientes métodos...
       </Typography>
       <Grid container spacing={1}>
-        {methods.map(i => (
-          <Grid item xs={12} md={4}>
+        {methods.map((i, ind) => (
+          <Grid item xs={12} md={4} key={ind}>
             <Button
               size="large"
               href={i.url}

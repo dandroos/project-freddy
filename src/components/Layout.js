@@ -1,14 +1,56 @@
+import { AnimatePresence, motion } from "framer-motion"
 import { Box, Toolbar, useMediaQuery, useTheme } from "@mui/material"
 import React, { useEffect } from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import { setCourses, setFontLoaded, setIsMobile } from "../redux/actions"
+
+import BookingForm from "./BookingForm"
+import FontFaceObserver from "fontfaceobserver"
 import Footer from "./Footer"
 import Header from "./Header"
-import FontFaceObserver from "fontfaceobserver"
-import { connect } from "react-redux"
-import { setFontLoaded, setIsMobile } from "../redux/actions"
-import { AnimatePresence, motion } from "framer-motion"
+import MobileFab from "./MobileFab"
 import config from "../../style"
+import { connect } from "react-redux"
+import uniqid from "uniqid"
 
 const Layout = ({ dispatch, location, children }) => {
+  const courses = useStaticQuery(graphql`
+    {
+      file(
+        extension: { eq: "md" }
+        name: { eq: "courses" }
+        sourceInstanceName: { eq: "content" }
+      ) {
+        childMarkdownRemark {
+          frontmatter {
+            course_list {
+              course {
+                level
+                start_time
+                finish_time
+                min_age
+                max_age
+                space
+                days
+              }
+            }
+          }
+        }
+      }
+    }
+  `).file.childMarkdownRemark.frontmatter.course_list.map((i, ind) => {
+    return {
+      ...i.course,
+      start_time: `${i.course.start_time
+        .toString()
+        .slice(0, -2)}:${i.course.start_time.toString().slice(-2)}`,
+      finish_time: `${i.course.finish_time
+        .toString()
+        .slice(0, -2)}:${i.course.finish_time.toString().slice(-2)}`,
+      id: uniqid(),
+    }
+  })
+
   useEffect(() => {
     const loadFont = () => {
       const font = new FontFaceObserver(config.typography.secondary.family)
@@ -18,6 +60,8 @@ const Layout = ({ dispatch, location, children }) => {
       }, loadFont)
     }
     loadFont()
+
+    dispatch(setCourses(courses))
     //eslint-disable-next-line
   }, [])
 
@@ -30,13 +74,15 @@ const Layout = ({ dispatch, location, children }) => {
 
   return (
     <Box display="flex" minHeight="100vh" flexDirection="column">
+      {isMobile && <MobileFab />}
+      <BookingForm />
       <Box component="header">
         <Header />
       </Box>
       <AnimatePresence exitBeforeEnter>
         <Box
           sx={
-            isMobile ? undefined : { width: `calc(100% - 350px)`, ml: `350px` }
+            isMobile ? undefined : { width: `calc(100% - 300px)`, ml: `300px` }
           }
           display="flex"
           flexDirection="column"
@@ -55,14 +101,13 @@ const Layout = ({ dispatch, location, children }) => {
             flexDirection="column"
             minHeight="100vh"
             flexGrow={1}
-            sx={{ py: 2 }}
+            sx={{ pb: location.pathname !== "/" ? 2 : 0 }}
           >
-            {isMobile && <Toolbar />}
+            {isMobile && location.pathname !== "/" && <Toolbar />}
             {children}
           </Box>
           <Box
             component="footer"
-            // bgcolor="primary.dark"
             color="primary.contrastText"
             textAlign="center"
           >

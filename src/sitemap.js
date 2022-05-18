@@ -1,16 +1,23 @@
 export const nav = {
   internal: [
-    {
-      label: "Noticias",
-      url: "/noticias",
-    },
+    // {
+    //   label: "Noticias",
+    //   url: "/noticias",
+    // },
     {
       label: "Cursos",
-      url: "/cursos",
+      dropdown: [
+        { label: "Presenciales", url: "/cursos-presenciales" },
+        { label: "Online", url: "/cursos-online" },
+      ],
     },
     {
-      label: "Sobre nosotros",
-      url: "/sobre-nosotros",
+      label: "Conócenos",
+      url: "/conocenos",
+    },
+    {
+      label: "FAQ",
+      url: "/faq",
     },
     {
       label: "Contáctenos",

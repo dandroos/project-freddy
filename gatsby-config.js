@@ -9,27 +9,13 @@ module.exports = {
     siteUrl: `https://elrincondeidiomas.com/`,
   },
   plugins: [
-    `site-wrapper`,
-    `mui-emotion`,
-    `redux`,
-    `gatsby-plugin-netlify-cms`,
-    `gatsby-plugin-react-helmet`,
+    "gatsby-plugin-site-wrapper",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-mui-emotion",
+    "gatsby-plugin-redux",
     `gatsby-plugin-image`,
-    {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        custom: {
-          families: ["forte"],
-          urls: ["/fonts/fonts.css"],
-        },
-      },
-    },
-    {
-      resolve: "gatsby-plugin-react-leaflet",
-      options: {
-        linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
-      },
-    },
+    `gatsby-plugin-netlify-cms`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -37,8 +23,77 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `articles`,
+    //     path: `${__dirname}/content/articles`,
+    //   },
+    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/content`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `contact`,
+        path: `${__dirname}/contact`,
+      },
+    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `courses`,
+    //     path: `${__dirname}/content/courses`,
+    //   },
+    // },
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          // gatsby-remark-relative-images must go before gatsby-remark-images
+          {
+            resolve: `gatsby-remark-relative-images-v2`,
+            options: {
+              staticFolderName: "content/site_images",
+            },
+            // options: {
+            // [Optional] The root of "media_folder" in your config.yml
+            // Defaults to "static"
+            // staticFolderName: 'static',
+            // [Optional] Include the following fields, use dot notation for nested fields
+            // All fields are included by default
+            // include: ['featured'],
+            // [Optional] Exclude the following fields, use dot notation for nested fields
+            // No fields are excluded by default
+            // exclude: ['featured.skip'],
+            // },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 500,
+              linkImagesToOriginal: false,
+              withWebp: true,
+            },
+          },
+        ],
+      },
+    },
+
+    {
+      resolve: "gatsby-plugin-react-leaflet",
+      options: {
+        linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -53,8 +108,5 @@ module.exports = {
         icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

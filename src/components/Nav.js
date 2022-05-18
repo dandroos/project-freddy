@@ -6,17 +6,18 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material"
-import { StaticImage } from "gatsby-plugin-image"
-import React from "react"
-import { connect } from "react-redux"
+import { graphql, navigate, useStaticQuery } from "gatsby"
+
 import { Menu } from "mdi-material-ui"
-import NavMenu from "./NavMenu"
 import MobileMenu from "./MobileMenu"
+import NavMenu from "./NavMenu"
+import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
+import { connect } from "react-redux"
 import { setMobileMenu } from "../redux/actions"
-import { graphql, Link, useStaticQuery } from "gatsby"
 
 const Nav = ({ dispatch, isMobile }) => {
-  const drawerWidth = 350
+  const drawerWidth = 300
 
   const { title } = useStaticQuery(graphql`
     {
@@ -31,14 +32,17 @@ const Nav = ({ dispatch, isMobile }) => {
   return isMobile ? (
     <>
       <MobileMenu />
-      <AppBar color="primary" variant="outlined">
+      <AppBar color="secondary" enableColorOnDark>
         <Toolbar>
           <Box
-            component={Link}
-            to="/"
             sx={{ display: "flex", alignItems: "center", cursor: "pointer" }}
+            onClick={() => navigate("/")}
           >
-            <StaticImage src="../images/logo-white.png" width={45} />
+            <StaticImage
+              alt="El Rincón de Idiomas logo"
+              src="../images/logo-white.png"
+              width={45}
+            />
             <Typography
               variant="h5"
               variantMapping={{ h5: "h1" }}

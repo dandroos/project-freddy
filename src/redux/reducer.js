@@ -1,12 +1,13 @@
 import {
+  SET_BOOKING_FORM,
+  SET_COURSES,
   SET_FONT_LOADED,
   SET_IS_MOBILE,
   SET_MOBILE_MENU,
-  SET_COURSES,
-  SET_BOOKING_FORM,
 } from "./types"
 
 const initialState = {
+  siteReady: false,
   fontLoaded: false,
   isMobile: null,
   mobileMenu: false,
@@ -18,7 +19,7 @@ const initialState = {
 }
 
 export const reducer = (state = initialState, { type, payload }) => {
-  console.log(type, payload)
+  // console.log(type, payload)
   const newState = Object.assign({}, state)
 
   switch (type) {

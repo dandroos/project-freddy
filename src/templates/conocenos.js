@@ -5,38 +5,39 @@ import { Typography } from "@mui/material"
 import { connect } from "react-redux"
 import { graphql } from "gatsby"
 
-const Conocenos = ({ data, isMobile }) => {
+const Conocenos = ({ data, siteReady }) => {
   const { primary_text, secondary_text } =
     data.text.childMarkdownRemark.frontmatter
   return (
-    <Page
-      title="Conócenos"
-      image={data.headerImage.childMarkdownRemark.frontmatter.conocenos}
-    >
-      <ReactMarkdown
-        includeElementIndex
-        children={primary_text}
-        components={{
-          p: ({ node, index }) => {
-            return (
-              <Typography variant="lead" paragraph>
-                {node.children.map(i => {
-                  if (i.tagName === "strong") {
-                    return <strong key={index}>{i.children[0].value}</strong>
-                  }
-                  if (i.tagName === "em") {
-                    return <em key={index}>{i.children[0].value}</em>
-                  } else if (!i.tagName) {
-                    return i.value
-                  }
-                  return null
-                })}
-              </Typography>
-            )
-          },
-        }}
-      />
-      {/* <GatsbyImage
+    siteReady && (
+      <Page
+        title="Conócenos"
+        image={data.headerImage.childMarkdownRemark.frontmatter.conocenos}
+      >
+        <ReactMarkdown
+          includeElementIndex
+          children={primary_text}
+          components={{
+            p: ({ node, index }) => {
+              return (
+                <Typography variant="lead" paragraph>
+                  {node.children.map(i => {
+                    if (i.tagName === "strong") {
+                      return <strong key={index}>{i.children[0].value}</strong>
+                    }
+                    if (i.tagName === "em") {
+                      return <em key={index}>{i.children[0].value}</em>
+                    } else if (!i.tagName) {
+                      return i.value
+                    }
+                    return null
+                  })}
+                </Typography>
+              )
+            },
+          }}
+        />
+        {/* <GatsbyImage
         image={getImage(
           isMobile
             ? data.mobImage.childMarkdownRemark.frontmatter.about_image
@@ -45,36 +46,38 @@ const Conocenos = ({ data, isMobile }) => {
         style={{ marginBottom: 15 }}
         quality={99}
       /> */}
-      <ReactMarkdown
-        includeElementIndex
-        children={secondary_text}
-        components={{
-          p: ({ node, index, siblingCount }) => {
-            return (
-              <Typography paragraph={index + 1 !== siblingCount}>
-                {node.children.map((i, jInd) => {
-                  if (i.tagName === "strong") {
-                    return <strong key={index}>{i.children[0].value}</strong>
-                  }
-                  if (i.tagName === "em") {
-                    return <em key={index}>{i.children[0].value}</em>
-                  } else if (!i.tagName) {
-                    return (
-                      <React.Fragment key={index}>{i.value}</React.Fragment>
-                    )
-                  }
-                  return null
-                })}
-              </Typography>
-            )
-          },
-        }}
-      />
-    </Page>
+        <ReactMarkdown
+          includeElementIndex
+          children={secondary_text}
+          components={{
+            p: ({ node, index, siblingCount }) => {
+              return (
+                <Typography paragraph={index + 1 !== siblingCount}>
+                  {node.children.map((i, jInd) => {
+                    if (i.tagName === "strong") {
+                      return <strong key={index}>{i.children[0].value}</strong>
+                    }
+                    if (i.tagName === "em") {
+                      return <em key={index}>{i.children[0].value}</em>
+                    } else if (!i.tagName) {
+                      return (
+                        <React.Fragment key={index}>{i.value}</React.Fragment>
+                      )
+                    }
+                    return null
+                  })}
+                </Typography>
+              )
+            },
+          }}
+        />
+      </Page>
+    )
   )
 }
 
 const stp = s => ({
+  siteReady: s.siteReady,
   isMobile: s.isMobile,
 })
 

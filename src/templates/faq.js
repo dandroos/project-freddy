@@ -2,33 +2,42 @@ import { Card, CardContent, Grid, Typography } from "@mui/material"
 
 import Page from "../components/Page"
 import React from "react"
+import { connect } from "react-redux"
 import { graphql } from "gatsby"
 
-const Faq = ({ data }) => {
+const Faq = ({ data, siteReady }) => {
   return (
-    <Page
-      title="FAQ"
-      image={data.headerImage.childMarkdownRemark.frontmatter.faq}
-    >
-      <Grid container spacing={2}>
-        {data.faqs.childMarkdownRemark.frontmatter.faqs.map(({ faq }, ind) => {
-          return (
-            <Grid item xs={12} key={ind}>
-              <Card variant="outlined">
-                <CardContent>
-                  <Typography variant="h5">{faq.question}</Typography>
-                  <Typography>{faq.answer}</Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          )
-        })}
-      </Grid>
-    </Page>
+    siteReady && (
+      <Page
+        title="FAQ"
+        image={data.headerImage.childMarkdownRemark.frontmatter.faq}
+      >
+        <Grid container spacing={2}>
+          {data.faqs.childMarkdownRemark.frontmatter.faqs.map(
+            ({ faq }, ind) => {
+              return (
+                <Grid item xs={12} key={ind}>
+                  <Card variant="outlined">
+                    <CardContent>
+                      <Typography variant="h5">{faq.question}</Typography>
+                      <Typography>{faq.answer}</Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              )
+            }
+          )}
+        </Grid>
+      </Page>
+    )
   )
 }
 
-export default Faq
+const stp = s => ({
+  siteReady: s.siteReady,
+})
+
+export default connect(stp)(Faq)
 
 export const query = graphql`
   query ($light: String!, $dark: String!) {

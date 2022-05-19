@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion"
 import { Box, Toolbar, useMediaQuery, useTheme } from "@mui/material"
 import React, { useEffect, useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { setCourses, setIsMobile } from "../redux/actions"
+import { setCourses, setIsMobile, setSiteReady } from "../redux/actions"
 
 import BookingForm from "./BookingForm"
 import FontFaceObserver from "fontfaceobserver"
@@ -59,6 +59,7 @@ const Layout = ({ dispatch, location, children }) => {
 
       font.load().then(() => {
         setFontLoaded(true)
+        dispatch(setSiteReady(true))
       }, loadFont)
     }
     loadFont()

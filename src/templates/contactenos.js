@@ -4,27 +4,34 @@ import ContactForm from "../components/ContactForm"
 import LocationAndSchedule from "../components/LocationAndSchedule"
 import Page from "../components/Page"
 import React from "react"
+import { connect } from "react-redux"
 import { graphql } from "gatsby"
 
-const Contactenos = ({ data }) => {
+const Contactenos = ({ data, siteReady }) => {
   return (
-    <Page
-      title="Contáctenos"
-      noCTA
-      image={data.headerImage.childMarkdownRemark.frontmatter.contactenos}
-    >
-      <Box>
-        <ContactButtons />
-      </Box>
-      <Box my={2}>
-        <ContactForm />
-      </Box>
-      <LocationAndSchedule />
-    </Page>
+    siteReady && (
+      <Page
+        title="Contáctenos"
+        noCTA
+        image={data.headerImage.childMarkdownRemark.frontmatter.contactenos}
+      >
+        <Box>
+          <ContactButtons />
+        </Box>
+        <Box my={2}>
+          <ContactForm />
+        </Box>
+        <LocationAndSchedule />
+      </Page>
+    )
   )
 }
 
-export default Contactenos
+const stp = s => ({
+  siteReady: s.siteReady,
+})
+
+export default connect(stp)(Contactenos)
 
 export const query = graphql`
   query ($light: String!, $dark: String!) {

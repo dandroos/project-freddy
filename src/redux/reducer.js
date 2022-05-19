@@ -4,6 +4,7 @@ import {
   SET_FONT_LOADED,
   SET_IS_MOBILE,
   SET_MOBILE_MENU,
+  SET_SITE_READY,
 } from "./types"
 
 const initialState = {
@@ -37,6 +38,9 @@ export const reducer = (state = initialState, { type, payload }) => {
       break
     case SET_BOOKING_FORM:
       newState.bookingForm = payload
+      break
+    case SET_SITE_READY:
+      newState.siteReady = payload
       break
     default:
       break

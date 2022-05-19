@@ -1,9 +1,10 @@
 import {
+  SET_BOOKING_FORM,
+  SET_COURSES,
   SET_FONT_LOADED,
   SET_IS_MOBILE,
   SET_MOBILE_MENU,
-  SET_COURSES,
-  SET_BOOKING_FORM,
+  SET_SITE_READY,
 } from "./types"
 
 export const setFontLoaded = payload => ({
@@ -28,5 +29,10 @@ export const setCourses = payload => ({
 
 export const setBookingForm = payload => ({
   type: SET_BOOKING_FORM,
+  payload,
+})
+
+export const setSiteReady = payload => ({
+  type: SET_SITE_READY,
   payload,
 })

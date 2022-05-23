@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion"
-import { Box, Toolbar, useMediaQuery, useTheme } from "@mui/material"
+import { Box, Fade, Toolbar, useMediaQuery, useTheme } from "@mui/material"
 import React, { useEffect, useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { setCourses, setIsMobile, setSiteReady } from "../redux/actions"
@@ -13,7 +13,7 @@ import config from "../../style"
 import { connect } from "react-redux"
 import uniqid from "uniqid"
 
-const Layout = ({ dispatch, location, children }) => {
+const Layout = ({ dispatch, location, children, siteReady }) => {
   const courses = useStaticQuery(graphql`
     {
       file(
@@ -59,7 +59,7 @@ const Layout = ({ dispatch, location, children }) => {
 
       font.load().then(() => {
         setFontLoaded(true)
-        dispatch(setSiteReady(true))
+        // dispatch(setSiteReady(true))
       }, loadFont)
     }
     loadFont()
@@ -80,9 +80,11 @@ const Layout = ({ dispatch, location, children }) => {
       <Box display="flex" minHeight="100vh" flexDirection="column">
         {isMobile && <MobileFab />}
         <BookingForm />
-        <Box component="header">
-          <Header />
-        </Box>
+        <Fade in onEntered={() => dispatch(setSiteReady(true))}>
+          <Box component="header">
+            <Header />
+          </Box>
+        </Fade>
         <AnimatePresence exitBeforeEnter>
           <Box
             sx={
@@ -126,4 +128,8 @@ const Layout = ({ dispatch, location, children }) => {
   )
 }
 
-export default connect()(Layout)
+const stp = s => ({
+  siteReady: s.siteReady,
+})
+
+export default connect(stp)(Layout)

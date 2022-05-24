@@ -6,9 +6,12 @@
  */
 
 import * as React from "react"
-import PropTypes from "prop-types"
+
+import { graphql, useStaticQuery } from "gatsby"
+
 import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import PropTypes from "prop-types"
+import ogImage from "../images/og.png"
 
 function Seo({ description, meta, title }) {
   const { site } = useStaticQuery(
@@ -19,6 +22,7 @@ function Seo({ description, meta, title }) {
             title
             description
             author
+            siteUrl
           }
         }
       }
@@ -52,13 +56,17 @@ function Seo({ description, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: site.siteMetadata.siteUrl + ogImage,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
-        },
+        // {
+        //   name: `twitter:creator`,
+        //   content: site.siteMetadata?.author || ``,
+        // },
         {
           name: `twitter:title`,
           content: title,

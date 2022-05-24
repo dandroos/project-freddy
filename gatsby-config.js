@@ -6,7 +6,7 @@ module.exports = {
     description: `El Rincón de Idiomas es una escuela de inglés con sede en Fuerteventura. Somos un centro de preparación de exámenes de Cambridge English.`,
     lang: "en",
     author: `@dandrewsdeveloper`,
-    siteUrl: `https://elrincondeidiomas.com/`,
+    siteUrl: `https://elrincondeidiomas.netlify.app/`,
   },
   plugins: [
     "gatsby-plugin-site-wrapper",

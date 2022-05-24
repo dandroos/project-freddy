@@ -36,10 +36,15 @@ const MobileFab = ({ isMobile }) => {
 
   const phoneNumber = data.phone.childMarkdownRemark.frontmatter.phone_number
   const facebookId = data.facebook.childMarkdownRemark.frontmatter.facebook
+
+  const handleClose = () => {
+    setAnchorEl(null)
+  }
+
   return (
     <>
       <Fab
-        color="primary"
+        color="secondary"
         size="medium"
         onClick={e => setAnchorEl(e.target)}
         sx={{ position: "fixed", bottom: 15, right: 15, zIndex: 5000 }}
@@ -49,12 +54,17 @@ const MobileFab = ({ isMobile }) => {
       <Menu
         anchorEl={anchorEl}
         open={Boolean(anchorEl)}
-        onClose={() => setAnchorEl(null)}
+        onClose={handleClose}
         MenuListProps={{ disablePadding: true }}
         sx={{ zIndex: 5050 }}
       >
         <ListSubheader>Contacto rápido</ListSubheader>
-        <MenuItem component="a" href={`tel:${phoneNumber}`} target="_blank">
+        <MenuItem
+          component="a"
+          href={`tel:${phoneNumber}`}
+          target="_blank"
+          onClick={handleClose}
+        >
           <ListItemIcon>
             <Phone />
           </ListItemIcon>
@@ -64,6 +74,7 @@ const MobileFab = ({ isMobile }) => {
           component="a"
           href={`https://wa.me/${phoneNumber}`}
           target="_blank"
+          onClick={handleClose}
         >
           <ListItemIcon>
             <Whatsapp />
@@ -74,6 +85,7 @@ const MobileFab = ({ isMobile }) => {
           component="a"
           href={`http://m.me/${facebookId}`}
           target="_blank"
+          onClick={handleClose}
         >
           <ListItemIcon>
             <FacebookMessenger />

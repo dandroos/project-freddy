@@ -32,7 +32,7 @@ const Nav = ({ dispatch, isMobile }) => {
   return isMobile ? (
     <>
       <MobileMenu />
-      <AppBar color="secondary" enableColorOnDark>
+      <AppBar color="primary">
         <Toolbar>
           <Box
             sx={{ display: "flex", alignItems: "center", cursor: "pointer" }}

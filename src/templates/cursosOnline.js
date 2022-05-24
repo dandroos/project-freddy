@@ -5,15 +5,21 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material"
+import React, { useEffect } from "react"
 
 import { InformationOutline } from "mdi-material-ui"
 import Page from "../components/Page"
-import React from "react"
 import ReactMarkdown from "react-markdown"
 import { connect } from "react-redux"
 import { graphql } from "gatsby"
+import { setPageTitle } from "../redux/actions"
 
-const Cursos = ({ data, siteReady }) => {
+const Cursos = ({ data, dispatch, siteReady }) => {
+  useEffect(() => {
+    dispatch(setPageTitle("Cursos Online"))
+    //eslint-disable-next-line
+  }, [])
+
   return (
     siteReady && (
       <Page

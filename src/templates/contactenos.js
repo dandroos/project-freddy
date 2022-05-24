@@ -1,13 +1,20 @@
+import React, { useEffect } from "react"
+
 import { Box } from "@mui/material"
 import ContactButtons from "../components/ContactButtons"
 import ContactForm from "../components/ContactForm"
 import LocationAndSchedule from "../components/LocationAndSchedule"
 import Page from "../components/Page"
-import React from "react"
 import { connect } from "react-redux"
 import { graphql } from "gatsby"
+import { setPageTitle } from "../redux/actions"
 
-const Contactenos = ({ data, siteReady }) => {
+const Contactenos = ({ data, dispatch, siteReady }) => {
+  useEffect(() => {
+    dispatch(setPageTitle("Contáctenos"))
+    //eslint-disable-next-line
+  }, [])
+
   return (
     siteReady && (
       <Page

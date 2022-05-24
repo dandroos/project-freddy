@@ -9,21 +9,29 @@ import {
   useTheme,
 } from "@mui/material"
 import { Link, graphql } from "gatsby"
+import React, { useEffect } from "react"
 
 import BackgroundImage from "gatsby-background-image"
 import { Carousel } from "react-responsive-carousel"
-import React from "react"
-import Seo from "../components/seo"
 import { connect } from "react-redux"
 import { convertToBgImage } from "gbimage-bridge"
 import { getImage } from "gatsby-plugin-image"
+import { setPageTitle } from "../redux/actions"
 
-const Index = ({ data, siteReady }) => {
+// import Seo from "../components/seo"
+
+const Index = ({ data, dispatch, siteReady }) => {
   const theme = useTheme()
+
+  useEffect(() => {
+    dispatch(setPageTitle("Inicio"))
+    //eslint-disable-next-line
+  }, [])
+
   return (
     siteReady && (
       <>
-        <Seo title="Inicio" />
+        {/* <Seo title="Inicio" /> */}
         <Carousel
           showThumbs={false}
           infiniteLoop

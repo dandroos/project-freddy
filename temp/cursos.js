@@ -8,16 +8,20 @@ import {
   useTheme,
 } from "@mui/material"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import React, { useEffect } from "react"
 
 import Page from "../components/Page"
-import React from "react"
 import { connect } from "react-redux"
 import { graphql } from "gatsby"
 import { setBookingForm } from "../redux/actions"
+import { setPageTitle } from "../src/redux/actions"
 
 const Cursos = ({ data, dispatch, isMobile, courses }) => {
   const theme = useTheme()
 
+  useEffect(() => {
+    dispatch(setPageTitle("Cursos"))
+  }, [])
   return (
     <Page
       title="Cursos"

@@ -9,11 +9,12 @@ import FontFaceObserver from "fontfaceobserver"
 import Footer from "./Footer"
 import Header from "./Header"
 import MobileFab from "./MobileFab"
+import Seo from "./seo"
 import config from "../../style"
 import { connect } from "react-redux"
 import uniqid from "uniqid"
 
-const Layout = ({ dispatch, location, children, siteReady }) => {
+const Layout = ({ dispatch, location, children, pageTitle }) => {
   const courses = useStaticQuery(graphql`
     {
       file(
@@ -76,60 +77,64 @@ const Layout = ({ dispatch, location, children, siteReady }) => {
   }, [isMobile])
 
   return (
-    fontLoaded && (
-      <Box display="flex" minHeight="100vh" flexDirection="column">
-        {isMobile && <MobileFab />}
-        <BookingForm />
-        <Fade in onEntered={() => dispatch(setSiteReady(true))}>
-          <Box component="header">
-            <Header />
-          </Box>
-        </Fade>
-        <AnimatePresence exitBeforeEnter>
-          <Box
-            sx={
-              isMobile
-                ? undefined
-                : { width: `calc(100% - 300px)`, ml: `300px` }
-            }
-            display="flex"
-            flexDirection="column"
-            flexGrow={1}
-            justifyContent="space-between"
-            key={location.pathname}
-            component={motion.div}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-          >
+    <>
+      <Seo title={pageTitle} />
+      {fontLoaded && (
+        <Box display="flex" minHeight="100vh" flexDirection="column">
+          {isMobile && <MobileFab />}
+          <BookingForm />
+          <Fade in onEntered={() => dispatch(setSiteReady(true))}>
+            <Box component="header">
+              <Header />
+            </Box>
+          </Fade>
+          <AnimatePresence exitBeforeEnter>
             <Box
-              component="main"
+              sx={
+                isMobile
+                  ? undefined
+                  : { width: `calc(100% - 300px)`, ml: `300px` }
+              }
               display="flex"
               flexDirection="column"
-              minHeight="100vh"
               flexGrow={1}
-              sx={{ pb: location.pathname !== "/" ? 2 : 0 }}
+              justifyContent="space-between"
+              key={location.pathname}
+              component={motion.div}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
             >
-              {isMobile && location.pathname !== "/" && <Toolbar />}
-              {children}
+              <Box
+                component="main"
+                display="flex"
+                flexDirection="column"
+                minHeight="100vh"
+                flexGrow={1}
+                sx={{ pb: location.pathname !== "/" ? 2 : 0 }}
+              >
+                {isMobile && location.pathname !== "/" && <Toolbar />}
+                {children}
+              </Box>
+              <Box
+                component="footer"
+                color="primary.contrastText"
+                textAlign="center"
+              >
+                <Footer />
+              </Box>
             </Box>
-            <Box
-              component="footer"
-              color="primary.contrastText"
-              textAlign="center"
-            >
-              <Footer />
-            </Box>
-          </Box>
-        </AnimatePresence>
-      </Box>
-    )
+          </AnimatePresence>
+        </Box>
+      )}
+    </>
   )
 }
 
 const stp = s => ({
   siteReady: s.siteReady,
+  pageTitle: s.pageTitle,
 })
 
 export default connect(stp)(Layout)

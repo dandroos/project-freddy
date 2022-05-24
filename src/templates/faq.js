@@ -1,11 +1,17 @@
 import { Card, CardContent, Grid, Typography } from "@mui/material"
+import React, { useEffect } from "react"
 
 import Page from "../components/Page"
-import React from "react"
 import { connect } from "react-redux"
 import { graphql } from "gatsby"
+import { setPageTitle } from "../redux/actions"
 
-const Faq = ({ data, siteReady }) => {
+const Faq = ({ data, dispatch, siteReady }) => {
+  useEffect(() => {
+    dispatch(setPageTitle("FAQ"))
+    //eslint-disable-next-line
+  }, [])
+
   return (
     siteReady && (
       <Page

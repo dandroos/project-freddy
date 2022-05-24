@@ -7,15 +7,20 @@ import {
   Typography,
   useTheme,
 } from "@mui/material"
+import React, { useEffect } from "react"
+import { setBookingForm, setPageTitle } from "../redux/actions"
 
 import Page from "../components/Page"
-import React from "react"
 import { connect } from "react-redux"
 import { graphql } from "gatsby"
-import { setBookingForm } from "../redux/actions"
 
 const Cursos = ({ data, dispatch, siteReady, isMobile, courses }) => {
   const theme = useTheme()
+
+  useEffect(() => {
+    dispatch(setPageTitle("Cursos Presenciales"))
+    //eslint-disable-next-line
+  }, [])
 
   return (
     siteReady && (

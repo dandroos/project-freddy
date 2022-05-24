@@ -4,10 +4,12 @@ import {
   SET_FONT_LOADED,
   SET_IS_MOBILE,
   SET_MOBILE_MENU,
+  SET_PAGE_TITLE,
   SET_SITE_READY,
 } from "./types"
 
 const initialState = {
+  pageTitle: "",
   siteReady: false,
   fontLoaded: false,
   isMobile: null,
@@ -24,6 +26,9 @@ export const reducer = (state = initialState, { type, payload }) => {
   const newState = Object.assign({}, state)
 
   switch (type) {
+    case SET_PAGE_TITLE:
+      newState.pageTitle = payload
+      break
     case SET_FONT_LOADED:
       newState.fontLoaded = payload
       break

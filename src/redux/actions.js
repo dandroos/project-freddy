@@ -4,6 +4,7 @@ import {
   SET_FONT_LOADED,
   SET_IS_MOBILE,
   SET_MOBILE_MENU,
+  SET_PAGE_TITLE,
   SET_SITE_READY,
 } from "./types"
 
@@ -34,5 +35,10 @@ export const setBookingForm = payload => ({
 
 export const setSiteReady = payload => ({
   type: SET_SITE_READY,
+  payload,
+})
+
+export const setPageTitle = payload => ({
+  type: SET_PAGE_TITLE,
   payload,
 })

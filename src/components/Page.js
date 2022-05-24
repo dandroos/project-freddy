@@ -11,17 +11,21 @@ import BackgroundImage from "gatsby-background-image"
 import { Link } from "gatsby"
 import { Phone } from "mdi-material-ui"
 import React from "react"
-import Seo from "./seo"
 import { connect } from "react-redux"
 import { convertToBgImage } from "gbimage-bridge"
 import { getImage } from "gatsby-plugin-image"
+
+// import Seo from "./seo"
+
+
+
 
 const Page = ({ children, isMobile, title, image, noCTA }) => {
   const bgImage = convertToBgImage(getImage(image))
   const theme = useTheme()
   return (
     <>
-      <Seo title={title} />
+      {/* <Seo title={title} /> */}
       <BackgroundImage {...bgImage} placeholder="blurred">
         <Box width="100%" height={isMobile ? 200 : 400}>
           <Box

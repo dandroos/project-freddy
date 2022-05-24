@@ -1,13 +1,20 @@
+import React, { useEffect } from "react"
+
 import Page from "../components/Page"
-import React from "react"
 import ReactMarkdown from "react-markdown"
 import { Typography } from "@mui/material"
 import { connect } from "react-redux"
 import { graphql } from "gatsby"
+import { setPageTitle } from "../redux/actions"
 
-const Conocenos = ({ data, siteReady }) => {
+const Conocenos = ({ data, dispatch, siteReady }) => {
   const { primary_text, secondary_text } =
     data.text.childMarkdownRemark.frontmatter
+
+  useEffect(() => {
+    dispatch(setPageTitle("Conócenos"))
+    //eslint-disable-next-line
+  }, [])
   return (
     siteReady && (
       <Page

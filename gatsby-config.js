@@ -11,7 +11,7 @@ module.exports = {
   plugins: [
     "gatsby-plugin-site-wrapper",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-mui-emotion",
+    "gatsby-plugin-emotion",
     "gatsby-plugin-redux",
     `gatsby-plugin-image`,
     `gatsby-plugin-netlify-cms`,

@@ -12,7 +12,7 @@ const Contactenos = ({ data, siteReady }) => {
   return (
     <>
       <Seo title="Contáctenos" />
-      <form
+      {/* <form
         name="contact"
         action="#"
         method="POST"
@@ -25,7 +25,7 @@ const Contactenos = ({ data, siteReady }) => {
         <input type="hidden" name="Email" />
         <input type="hidden" name="Teléfono" />
         <input type="hidden" name="Mensaje" />
-      </form>
+      </form> */}
       {siteReady && (
         <Page
           title="Contáctenos"

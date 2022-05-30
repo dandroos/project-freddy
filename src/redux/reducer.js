@@ -22,7 +22,6 @@ const initialState = {
 }
 
 export const reducer = (state = initialState, { type, payload }) => {
-  // console.log(type, payload)
   const newState = Object.assign({}, state)
 
   switch (type) {

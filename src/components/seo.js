@@ -31,15 +31,12 @@ function Seo({ homepage, description, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
-  console.log(defaultTitle)
   return (
     <Helmet
       htmlAttributes={{
         lang: "es",
       }}
-      title={title ? title : defaultTitle}
-      titleTemplate={!homepage ? `%s | ${defaultTitle}` : defaultTitle}
-      // titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      title={title ? `${title} | ${defaultTitle}` : defaultTitle}
       meta={[
         {
           name: `description`,
@@ -47,7 +44,7 @@ function Seo({ homepage, description, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title ? title : defaultTitle,
+          content: title ? `${title} | ${defaultTitle}` : defaultTitle,
         },
         {
           property: `og:description`,
@@ -69,13 +66,9 @@ function Seo({ homepage, description, meta, title }) {
           name: `twitter:card`,
           content: `summary`,
         },
-        // {
-        //   name: `twitter:creator`,
-        //   content: site.siteMetadata?.author || ``,
-        // },
         {
           name: `twitter:title`,
-          content: title,
+          content: title ? `${title} | ${defaultTitle}` : defaultTitle,
         },
         {
           name: `twitter:description`,
@@ -87,7 +80,7 @@ function Seo({ homepage, description, meta, title }) {
 }
 
 Seo.defaultProps = {
-  lang: `en`,
+  lang: `es`,
   meta: [],
   description: ``,
 }

@@ -50,7 +50,7 @@ const NavMenu = ({ dispatch, isMobile }) => {
         color="secondary"
         sx={{ display: "block", textAlign: "center" }}
         component="a"
-        to={url}
+        href={url}
       >
         <Icon sx={{ display: "block", m: "auto" }} />
         <Typography variant="subtitle1">{primary}</Typography>

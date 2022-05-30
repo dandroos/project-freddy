@@ -1,6 +1,7 @@
-import { Typography, Button, Grid, TextField, Link } from "@mui/material"
-import { Send } from "mdi-material-ui"
+import { Button, Grid, Link, TextField, Typography } from "@mui/material"
 import React, { useState } from "react"
+
+import { Send } from "mdi-material-ui"
 import { connect } from "react-redux"
 import { setBookingForm } from "../redux/actions"
 
@@ -123,7 +124,7 @@ const ContactForm = ({ dispatch }) => {
             />
           </Grid>
           <Grid item xs={12}>
-            <Button size="large" fullWidth endIcon={<Send />}>
+            <Button size="large" type="submit" fullWidth endIcon={<Send />}>
               Enviar
             </Button>
           </Grid>

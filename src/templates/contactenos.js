@@ -12,6 +12,16 @@ const Contactenos = ({ data, siteReady }) => {
   return (
     <>
       <Seo title="Contáctenos" />
+      <form
+        name="contact"
+        action="#"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        // onSubmit={handleSubmit}
+      >
+        <input type="hidden" name="form-name" value="contact" />
+      </form>
       {siteReady && (
         <Page
           title="Contáctenos"

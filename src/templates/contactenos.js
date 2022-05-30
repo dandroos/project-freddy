@@ -21,6 +21,10 @@ const Contactenos = ({ data, siteReady }) => {
         // onSubmit={handleSubmit}
       >
         <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="Nombre" />
+        <input type="hidden" name="Email" />
+        <input type="hidden" name="Teléfono" />
+        <input type="hidden" name="Mensaje" />
       </form>
       {siteReady && (
         <Page

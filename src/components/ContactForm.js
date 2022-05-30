@@ -118,7 +118,7 @@ const ContactForm = ({ dispatch }) => {
           </Grid>
           <Grid item xs={12}>
             <TextField
-              name="Message"
+              name="Mensaje"
               multiline
               rows={8}
               id="mensaje"

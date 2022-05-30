@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  Collapse,
   Grid,
   List,
   ListItemButton,
@@ -9,11 +8,11 @@ import {
   Typography,
   useTheme,
 } from "@mui/material"
-import { ChevronDown, ChevronUp, Email, Phone, Whatsapp } from "mdi-material-ui"
+import { Email, Phone, Whatsapp } from "mdi-material-ui"
 import { Link, graphql, navigate, useStaticQuery } from "gatsby"
-import React, { useState } from "react"
 import { setBookingForm, setMobileMenu } from "../redux/actions"
 
+import React from "react"
 import SocialBar from "./SocialBar"
 import { StaticImage } from "gatsby-plugin-image"
 import { connect } from "react-redux"
@@ -21,8 +20,6 @@ import { nav } from "../sitemap"
 
 const NavMenu = ({ dispatch, isMobile }) => {
   const theme = useTheme()
-
-  const [collapse, setCollapse] = useState(true)
 
   const { email_address, phone_number } = useStaticQuery(graphql`
     {
@@ -100,120 +97,48 @@ const NavMenu = ({ dispatch, isMobile }) => {
       </Box>
       <List sx={{ width: "100%" }}>
         {nav.internal.map((i, ind) => {
-          if (i.dropdown) {
-            return (
-              <React.Fragment key={ind}>
-                <ListItemButton
-                  sx={{ textAlign: "center" }}
-                  onClick={() => setCollapse(!collapse)}
-                >
-                  <ListItemText
-                    primary={i.label}
-                    primaryTypographyProps={{ variant: "nav" }}
-                  />
-                  {!collapse ? (
-                    <>
-                      <ChevronUp
-                        fontSize="small"
-                        sx={{ position: "absolute", left: 15 }}
-                      />
-                      <ChevronUp
-                        fontSize="small"
-                        sx={{ position: "absolute", right: 15 }}
-                      />
-                    </>
-                  ) : (
-                    <React.Fragment key={ind}>
-                      <ChevronDown
-                        fontSize="small"
-                        sx={{ position: "absolute", left: 15 }}
-                      />
-                      <ChevronDown
-                        fontSize="small"
-                        sx={{ position: "absolute", right: 15 }}
-                      />
-                    </React.Fragment>
-                  )}
-                </ListItemButton>
-                <Collapse in={!collapse}>
-                  {i.dropdown.map((j, jInd) => (
-                    <ListItemButton
-                      key={jInd}
-                      component={Link}
-                      to={j.url}
-                      sx={{
-                        textAlign: "center",
-                        py: 0,
-                        backgroundColor: theme.palette.primary.light,
-                        ":hover": {
-                          backgroundColor: theme.palette.primary.main,
-                        },
-                      }}
-                      activeStyle={{ fontWeight: "bold", letterSpacing: 2 }}
-                      onClick={() => {
-                        if (isMobile) {
-                          dispatch(setMobileMenu(false))
-                        }
-                      }}
-                    >
-                      <ListItemText
-                        primary={j.label}
-                        primaryTypographyProps={{
-                          variant: "overline",
-                          fontWeight: "inherit",
-                          lineHeight: 1.5,
-                          sx: { transition: "all .3s" },
-                        }}
-                      />
-                    </ListItemButton>
-                  ))}
-                </Collapse>
-              </React.Fragment>
-            )
-          } else {
-            return (
-              <ListItemButton
-                key={ind}
-                component={!i.special ? Link : undefined}
-                {...(!i.special && {
-                  activeStyle: { fontWeight: "bold", letterSpacing: 2 },
-                })}
-                to={!i.special ? i.url : undefined}
-                sx={{
-                  letterSpacing: 1,
-                  textAlign: "center",
+          return (
+            <ListItemButton
+              key={ind}
+              component={!i.special ? Link : undefined}
+              {...(!i.special && {
+                activeStyle: { fontWeight: "bold", letterSpacing: 2 },
+              })}
+              to={!i.special ? i.url : undefined}
+              sx={{
+                letterSpacing: 1,
+                textAlign: "center",
+                backgroundColor: i.special
+                  ? theme.palette.secondary.main
+                  : undefined,
+                ":hover": {
                   backgroundColor: i.special
-                    ? theme.palette.secondary.main
+                    ? theme.palette.secondary.light
                     : undefined,
-                  ":hover": {
-                    backgroundColor: i.special
-                      ? theme.palette.secondary.light
-                      : undefined,
+                },
+              }}
+              onClick={() => {
+                if (i.special) {
+                  dispatch(setBookingForm({ isOpen: true }))
+                }
+                if (isMobile) {
+                  dispatch(setMobileMenu(false))
+                }
+              }}
+            >
+              <ListItemText
+                primary={i.label}
+                primaryTypographyProps={{
+                  variant: "nav",
+                  fontWeight: "inherit",
+                  letterSpacing: "inherit",
+                  sx: {
+                    transition: "all .3s",
                   },
                 }}
-                onClick={() => {
-                  if (i.special) {
-                    dispatch(setBookingForm({ isOpen: true }))
-                  }
-                  if (isMobile) {
-                    dispatch(setMobileMenu(false))
-                  }
-                }}
-              >
-                <ListItemText
-                  primary={i.label}
-                  primaryTypographyProps={{
-                    variant: "nav",
-                    fontWeight: "inherit",
-                    letterSpacing: "inherit",
-                    sx: {
-                      transition: "all .3s",
-                    },
-                  }}
-                />
-              </ListItemButton>
-            )
-          }
+              />
+            </ListItemButton>
+          )
         })}
       </List>
       <SocialBar />

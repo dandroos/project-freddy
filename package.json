@@ -30,7 +30,7 @@
     "gatsby-transformer-remark": "^5.10.0",
     "gatsby-transformer-sharp": "^4.9.0",
     "gbimage-bridge": "^0.2.1",
-    "html-react-parser": "^1.4.8",
+    "html-react-parser": "^1.4.13",
     "leaflet": "^1.7.1",
     "mdi-material-ui": "^7.2.0",
     "moment": "^2.29.1",

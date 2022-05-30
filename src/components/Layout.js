@@ -1,57 +1,17 @@
 import { AnimatePresence, motion } from "framer-motion"
 import { Box, Fade, Toolbar, useMediaQuery, useTheme } from "@mui/material"
 import React, { useEffect, useState } from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import { setCourses, setIsMobile, setSiteReady } from "../redux/actions"
+import { setIsMobile, setSiteReady } from "../redux/actions"
 
 import BookingForm from "./BookingForm"
 import FontFaceObserver from "fontfaceobserver"
 import Footer from "./Footer"
 import Header from "./Header"
 import MobileFab from "./MobileFab"
-import Seo from "./seo"
 import config from "../../style"
 import { connect } from "react-redux"
-import uniqid from "uniqid"
 
-const Layout = ({ dispatch, location, children, pageTitle }) => {
-  const courses = useStaticQuery(graphql`
-    {
-      file(
-        extension: { eq: "md" }
-        name: { eq: "courses" }
-        sourceInstanceName: { eq: "content" }
-      ) {
-        childMarkdownRemark {
-          frontmatter {
-            course_list {
-              course {
-                level
-                start_time
-                finish_time
-                min_age
-                max_age
-                space
-                days
-              }
-            }
-          }
-        }
-      }
-    }
-  `).file.childMarkdownRemark.frontmatter.course_list.map((i, ind) => {
-    return {
-      ...i.course,
-      start_time: `${i.course.start_time
-        .toString()
-        .slice(0, -2)}:${i.course.start_time.toString().slice(-2)}`,
-      finish_time: `${i.course.finish_time
-        .toString()
-        .slice(0, -2)}:${i.course.finish_time.toString().slice(-2)}`,
-      id: uniqid(),
-    }
-  })
-
+const Layout = ({ dispatch, location, children }) => {
   const [fontLoaded, setFontLoaded] = useState(false)
 
   useEffect(() => {
@@ -60,12 +20,10 @@ const Layout = ({ dispatch, location, children, pageTitle }) => {
 
       font.load().then(() => {
         setFontLoaded(true)
-        // dispatch(setSiteReady(true))
       }, loadFont)
     }
     loadFont()
 
-    dispatch(setCourses(courses))
     //eslint-disable-next-line
   }, [])
 
@@ -78,7 +36,6 @@ const Layout = ({ dispatch, location, children, pageTitle }) => {
 
   return (
     <>
-      <Seo title={pageTitle} />
       {fontLoaded && (
         <Box display="flex" minHeight="100vh" flexDirection="column">
           {isMobile && <MobileFab />}
@@ -134,7 +91,6 @@ const Layout = ({ dispatch, location, children, pageTitle }) => {
 
 const stp = s => ({
   siteReady: s.siteReady,
-  pageTitle: s.pageTitle,
 })
 
 export default connect(stp)(Layout)

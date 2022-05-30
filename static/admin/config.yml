@@ -150,97 +150,84 @@ collections:
                         options:
                           - {label: Courses page, value: 1}
                           - {label: About page, value: 2}
-                          - {label: Contact page, value: 3}
-      - label: Courses
-        name: courses
+                          - {label: Information page, value: 3}
+                          - {label: Contact page, value: 4}
+      - label: Cursos
+        name: cursos
         file: content/courses.md
         fields:
-          - label: Courses
-            name: course_list
-            summary: '{{fields.course.level}} - {{fields.course.days}} - {{fields.course.start_time}}'
-            widget: list
-            add_to_top: true
-            fields:
-              - label: Course 
-                name: course
-                widget: object
-                summary: '{{fields.level}} - {{fields.days}} - {{fields.start_time}}'
-                fields:
-                  - label: Level
-                    name: level
-                    widget: select
-                    options: ["Infantil", "Primaria", "A1", "A2", "B1", "B2", "C1", "C2"]
-                  - label: Days
-                    name: days
-                    widget: select
-                    multiple: true
-                    options: ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábados", "Domingos"]
-                  - label: Start time
-                    name: start_time
-                    pattern: ['\d\d\d\d', "Must be in 24hr clock format without a colon. e.g. 1345, 0900, etc"]
-                    hint: Must be in 24hr clock format without a colon. e.g. 1345, 0900, etc
-                    default: "1500"
-                  - label: Finish time
-                    name: finish_time
-                    pattern: ['\d\d\d\d', "Must be in 24hr clock format without a colon. e.g. 1345, 0900, etc"]
-                    hint: Must be in 24hr clock format without a colon. e.g. 1345, 0900, etc
-                    default: "1550"
-                  - label: Minimum age
-                    name: min_age
-                    widget: number
-                    hint: If no limit, select 0.
-                  - label: Maximum age
-                    name: max_age
-                    widget: number
-                    hint: If no limit, select 0.
-                  - label: "Space(s) available?"
-                    name: space
-                    widget: select
-                    options: ["Yes", "No"]
-                    default: ["Yes"]
-          - label: "Online classes text"
-            name: online_classes
-            widget: markdown 
-      - label: FAQs
-        name: faqs
-        file: content/faqs.md
+            - label: Body
+              name: body
+              widget: markdown
+              buttons: ["bold", "italic", "heading-one", "heading-two", "bulleted-list", "link"]
+              editor_components: []
+              modes: ["rich_text"]
+          # - label: Courses
+          #   name: course_list
+          #   summary: '{{fields.course.level}} - {{fields.course.days}} - {{fields.course.start_time}}'
+          #   widget: list
+          #   add_to_top: true
+          #   fields:
+          #     - label: Course 
+          #       name: course
+          #       widget: object
+          #       summary: '{{fields.level}} - {{fields.days}} - {{fields.start_time}}'
+          #       fields:
+          #         - label: Level
+          #           name: level
+          #           widget: select
+          #           options: ["Infantil", "Primaria", "A1", "A2", "B1", "B2", "C1", "C2"]
+          #         - label: Days
+          #           name: days
+          #           widget: select
+          #           multiple: true
+          #           options: ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábados", "Domingos"]
+          #         - label: Start time
+          #           name: start_time
+          #           pattern: ['\d\d\d\d', "Must be in 24hr clock format without a colon. e.g. 1345, 0900, etc"]
+          #           hint: Must be in 24hr clock format without a colon. e.g. 1345, 0900, etc
+          #           default: "1500"
+          #         - label: Finish time
+          #           name: finish_time
+          #           pattern: ['\d\d\d\d', "Must be in 24hr clock format without a colon. e.g. 1345, 0900, etc"]
+          #           hint: Must be in 24hr clock format without a colon. e.g. 1345, 0900, etc
+          #           default: "1550"
+          #         - label: Minimum age
+          #           name: min_age
+          #           widget: number
+          #           hint: If no limit, select 0.
+          #         - label: Maximum age
+          #           name: max_age
+          #           widget: number
+          #           hint: If no limit, select 0.
+          #         - label: "Space(s) available?"
+          #           name: space
+          #           widget: select
+          #           options: ["Yes", "No"]
+          #           default: ["Yes"]
+          # - label: "Online classes text"
+          #   name: online_classes
+          #   widget: markdown 
+      - label: Información
+        name: informacion
+        file: content/informacion.md
         fields:
-          - label: FAQs
-            name: faqs
-            widget: list
-            fields:
-              - label: FAQ
-                name: faq
-                widget: object
-                fields:
-                  - label: Question
-                    name: question
-                  - label: Answer
-                    name: answer
-                    widget: text
-      - label: About
-        name: about
-        file: content/about.md
-        fields:
-          - label: Image
-            name: about_image
-            widget: image
-            choose_url: false
-            allow_multiple: false
-          - label: Primary text
-            name: primary_text
+          - label: Body
+            name: body
             widget: markdown
-            buttons: ["bold", "italic"]
+            buttons: ["bold", "italic", "heading-one", "heading-two", "bulleted-list", "link"]
             editor_components: []
             modes: ["rich_text"]
-            hint: This text will appear at the top of the page before the photo
-          - label: Secondary text
-            name: secondary_text
+      - label: Conócenos
+        name: conocenos
+        file: content/conocenos.md
+        fields:
+          - label: Body
+            name: body
             widget: markdown
-            buttons: ["bold", "italic"]
+            buttons: ["bold", "italic", "heading-one", "heading-two", "bulleted-list", "link"]
             editor_components: []
             modes: ["rich_text"]
-            hint: This text will appear after the photo
   - label: Contact
     name: contact
     editor:

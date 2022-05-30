@@ -13,7 +13,7 @@ import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import ogImage from "../images/og.png"
 
-function Seo({ description, meta, title }) {
+function Seo({ homepage, description, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -31,13 +31,15 @@ function Seo({ description, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  console.log(defaultTitle)
   return (
     <Helmet
       htmlAttributes={{
         lang: "es",
       }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      title={title ? title : defaultTitle}
+      titleTemplate={!homepage ? `%s | ${defaultTitle}` : defaultTitle}
+      // titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
           name: `description`,

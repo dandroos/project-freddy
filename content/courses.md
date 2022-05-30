@@ -1,56 +1,42 @@
 ---
-course_list:
-  - course:
-      level: B2
-      days:
-        - Lunes
-        - Miércoles
-      start_time: 1700
-      finish_time: 1750
-      min_age: 13
-      max_age: 0
-      space: Yes
-  - course:
-      level: B1
-      days:
-        - Lunes
-        - Miércoles
-      start_time: 1600
-      finish_time: 1650
-      min_age: 11
-      max_age: 0
-      space: Yes
-  - course:
-      level: A2
-      days:
-        - Martes
-        - Jueves
-      start_time: 1810
-      finish_time: 1900
-      min_age: 9
-      max_age: 13
-      space: Yes
-  - course:
-      level: B1
-      days:
-        - Lunes
-        - Miércoles
-      start_time: 1810
-      finish_time: 1900
-      min_age: 11
-      space: No
-      max_age: 1
-online_classes: >-
-  También ofrecemos clases online así que si no puedes venir a nuestra academia
-  pueden ser muy beneficiosas.
-
-
-  * Las clases online son principalmente de conversación pero también podemos ofrecer cursos, nosotros nos adaptamos a tus necesidades. 
-
-  * Las clases suelen ser de una hora pero también podemos hacer clases de media hora y otras duraciones. 
-
-  * Somos profesores nativos con muchos años de enseñanza, ser nativo garantiza que no solo aprendas/mejores tus habilidades linguisticas sino que también aprendas algo sobre nuestra cultura. 
-
-
-  ¡Entonces, donde quiera que estés en el mundo puedes contar con El Rincón de Idiomas para tus clases online!
 ---
+# ¿Qué cursos ofrecemos?
+
+Los cursos que ofrecemos son de dos días a la semana con una duración de 50 minutos.
+
+* Infantil
+* Primaria
+* ESO
+* Bachillerato
+
+Impartimos cursos a todos los niveles desde infantil hasta Bachillerato.
+
+Somos un centro oficial de preparación de los exámenes de Cambridge y preparamos a nuestros alumnos para los siguientes exámenes:
+
+**Para los más pequeños (Young learners YLE)**
+
+* Starters:  7 y 8 años 
+* Movers:  9 y 10 años
+* Flyers:  11 y 12 años
+
+Los profesores asesoran a través de seguimiento y una evaluación en enero si se pueden presentar, depende de su nivel, se pueden hacer los exámenes antes, esto es solo una guía.  Estos exámenes son una gran motivación y un fuerte impulso a su aprendizaje.  Con estos exámenes preparamos los Young learners a acostumbrarse al funcionamiento de los exámenes.
+
+* KETs A2 Elemental
+* PETs B1 Pre intermedio
+* FCEs B2 Intermedio
+* CAE C1 Avanzado
+* CPE C2 Proficiency
+
+En enero haremos evaluaciones para ver la evolución de los alumnos a ver si podemos recomendarles para que se puedan presentarse a uno de los exámenes de Cambridge.
+
+Siempre estamos asesorando a nuestro alumnado para que ellos disfruten y saquen lo máximo de su experiencia de aprendizaje con nosotros.
+
+Ofrecemos cursos para adultos también, suelen ser clases individuales.
+
+Si quieres mejorar tus habilidades lingüísticas en el ámbito laboral, prepárate para los exámenes oficiales o simplemente para viajar al extranjero, nos adaptamos a tus necesidades.
+
+Practicar conversación con un nativo es lo mejor, no solo practicar el hablarlo sino descubriendo nuestra cultura.
+
+Además de inglés, ofrecemos cursos de Alemán y Francés en grupo o individual.
+
+Clases de conversación online: Inglés, Alemán, Francés e Italiano.

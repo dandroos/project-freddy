@@ -5,14 +5,14 @@ import Seo from "../components/seo"
 import { connect } from "react-redux"
 import { graphql } from "gatsby"
 
-const Conocenos = ({ data, siteReady }) => {
+const Cursos = ({ data, siteReady }) => {
   return (
     <>
-      <Seo title="Conócenos" />
+      <Seo title="Cursos" />
       {siteReady && (
         <Page
-          title="Conócenos"
-          image={data.headerImage.childMarkdownRemark.frontmatter.conocenos}
+          title="Cursos"
+          image={data.headerImage.childMarkdownRemark.frontmatter.cursos}
         >
           <HtmlParser input={data.body.childMarkdownRemark.html} />
         </Page>
@@ -23,29 +23,19 @@ const Conocenos = ({ data, siteReady }) => {
 
 const stp = s => ({
   siteReady: s.siteReady,
-  isMobile: s.isMobile,
 })
 
-export default connect(stp)(Conocenos)
+export default connect(stp)(Cursos)
 
 export const query = graphql`
   query ($light: String!, $dark: String!) {
-    body: file(
-      extension: { eq: "md" }
-      name: { eq: "conocenos" }
-      sourceInstanceName: { eq: "content" }
-    ) {
-      childMarkdownRemark {
-        html
-      }
-    }
     headerImage: file(
       sourceInstanceName: { eq: "content" }
       name: { eq: "images" }
     ) {
       childMarkdownRemark {
         frontmatter {
-          conocenos {
+          cursos {
             childImageSharp {
               gatsbyImageData(
                 aspectRatio: 1.5
@@ -58,6 +48,11 @@ export const query = graphql`
             }
           }
         }
+      }
+    }
+    body: file(sourceInstanceName: { eq: "content" }, name: { eq: "courses" }) {
+      childMarkdownRemark {
+        html
       }
     }
   }

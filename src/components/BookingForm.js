@@ -1,4 +1,6 @@
 import {
+  Alert,
+  AlertTitle,
   Box,
   Dialog,
   DialogContent,
@@ -78,17 +80,15 @@ const BookingForm = ({
           <Close />
         </Fab>
         <DialogContent>
-          <Box textAlign="center">
-            <Typography variant="h3" gutterBottom>
+          <Box>
+            <Typography variant="h3" align="center" gutterBottom>
               ¡Reservar ahora!
             </Typography>
-            <Typography display="block" fontWeight="bold" variant="button">
-              IMPORTANTE
-            </Typography>
-            <Typography variant="caption" display="block" gutterBottom>
+            <Alert severity="warning" variant="filled">
+              <AlertTitle>IMPORTANTE</AlertTitle>
               Su reserva no está confirmada hasta que le enviemos un correo
               electrónico de confirmación.
-            </Typography>
+            </Alert>
           </Box>
           <Grid container spacing={2}>
             <Grid item xs={12}>

@@ -6,18 +6,15 @@ export const nav = {
     // },
     {
       label: "Cursos",
-      dropdown: [
-        { label: "Presenciales", url: "/cursos-presenciales" },
-        { label: "Online", url: "/cursos-online" },
-      ],
+      url: "/cursos",
     },
     {
       label: "Conócenos",
       url: "/conocenos",
     },
     {
-      label: "FAQ",
-      url: "/faq",
+      label: "Información",
+      url: "/informacion",
     },
     {
       label: "Contáctenos",

@@ -38,10 +38,10 @@ const HtmlParser = ({ input }) => {
           if (domNode.type === "tag" && domNode.name === "ul") {
             return (
               <List>
-                {domNode.children.map(i => {
+                {domNode.children.map((i, ind) => {
                   if (i.type === "tag" && i.name === "li") {
                     return (
-                      <ListItem>
+                      <ListItem key={ind}>
                         <ListItemIcon>
                           <CircleSmall />
                         </ListItemIcon>

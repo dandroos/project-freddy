@@ -58,10 +58,10 @@ function Seo({ homepage, description, meta, title }) {
           property: `og:image`,
           content: site.siteMetadata.siteUrl + ogImage,
         },
-        {
-          property: `og:url`,
-          content: site.siteMetadata.siteUrl,
-        },
+        // {
+        //   property: `og:url`,
+        //   content: site.siteMetadata.siteUrl,
+        // },
         {
           name: `twitter:card`,
           content: `summary`,

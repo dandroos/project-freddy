@@ -12,7 +12,7 @@ const Contactenos = ({ data, siteReady }) => {
   return (
     <>
       <Seo title="Contáctenos" />
-      {/* <form
+      <form
         name="contact"
         action="#"
         method="POST"
@@ -21,11 +21,11 @@ const Contactenos = ({ data, siteReady }) => {
         // onSubmit={handleSubmit}
       >
         <input type="hidden" name="form-name" value="contact" />
-        <input type="hidden" name="Nombre" />
-        <input type="hidden" name="Email" />
-        <input type="hidden" name="Teléfono" />
-        <input type="hidden" name="Mensaje" />
-      </form> */}
+        <input type="hidden" name="nombre" />
+        <input type="hidden" name="email" />
+        <input type="hidden" name="telefono" />
+        <input type="hidden" name="mensaje" />
+      </form>
       {siteReady && (
         <Page
           title="Contáctenos"

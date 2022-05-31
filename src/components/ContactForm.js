@@ -90,7 +90,7 @@ const ContactForm = ({ dispatch }) => {
         <Grid container spacing={2}>
           <Grid item xs={12} md={4}>
             <TextField
-              name="Nombre"
+              name="nombre"
               id="nombre"
               label="Nombre"
               onChange={handleChange}
@@ -99,7 +99,7 @@ const ContactForm = ({ dispatch }) => {
           </Grid>
           <Grid item xs={12} md={4}>
             <TextField
-              name="Email"
+              name="email"
               id="email"
               label="Email"
               onChange={handleChange}
@@ -108,7 +108,7 @@ const ContactForm = ({ dispatch }) => {
           </Grid>
           <Grid item xs={12} md={4}>
             <TextField
-              name="Teléfono"
+              name="telefono"
               id="telefono"
               label="Teléfono"
               required={false}
@@ -118,7 +118,7 @@ const ContactForm = ({ dispatch }) => {
           </Grid>
           <Grid item xs={12}>
             <TextField
-              name="Mensaje"
+              name="mensaje"
               multiline
               rows={8}
               id="mensaje"

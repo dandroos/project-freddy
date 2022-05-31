@@ -8,6 +8,7 @@ import FontFaceObserver from "fontfaceobserver"
 import Footer from "./Footer"
 import Header from "./Header"
 import MobileFab from "./MobileFab"
+import Toast from "./Toast"
 import config from "../../style"
 import { connect } from "react-redux"
 
@@ -39,6 +40,7 @@ const Layout = ({ dispatch, location, children }) => {
       {fontLoaded && (
         <Box display="flex" minHeight="100vh" flexDirection="column">
           {isMobile && <MobileFab />}
+          <Toast />
           <BookingForm />
           <Fade in onEntered={() => dispatch(setSiteReady(true))}>
             <Box component="header">

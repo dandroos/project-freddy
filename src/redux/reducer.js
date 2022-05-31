@@ -4,12 +4,11 @@ import {
   SET_FONT_LOADED,
   SET_IS_MOBILE,
   SET_MOBILE_MENU,
-  SET_PAGE_TITLE,
   SET_SITE_READY,
+  SET_TOAST,
 } from "./types"
 
 const initialState = {
-  pageTitle: "",
   siteReady: false,
   fontLoaded: false,
   isMobile: null,
@@ -19,15 +18,17 @@ const initialState = {
     isOpen: false,
     selectedCourse: null,
   },
+  toast: {
+    open: false,
+    msg: "",
+    severity: "success",
+  },
 }
 
 export const reducer = (state = initialState, { type, payload }) => {
   const newState = Object.assign({}, state)
 
   switch (type) {
-    case SET_PAGE_TITLE:
-      newState.pageTitle = payload
-      break
     case SET_FONT_LOADED:
       newState.fontLoaded = payload
       break
@@ -45,6 +46,9 @@ export const reducer = (state = initialState, { type, payload }) => {
       break
     case SET_SITE_READY:
       newState.siteReady = payload
+      break
+    case SET_TOAST:
+      newState.toast = payload
       break
     default:
       break

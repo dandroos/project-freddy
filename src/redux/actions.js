@@ -4,8 +4,8 @@ import {
   SET_FONT_LOADED,
   SET_IS_MOBILE,
   SET_MOBILE_MENU,
-  SET_PAGE_TITLE,
   SET_SITE_READY,
+  SET_TOAST,
 } from "./types"
 
 export const setFontLoaded = payload => ({
@@ -38,7 +38,7 @@ export const setSiteReady = payload => ({
   payload,
 })
 
-export const setPageTitle = payload => ({
-  type: SET_PAGE_TITLE,
+export const setToast = payload => ({
+  type: SET_TOAST,
   payload,
 })

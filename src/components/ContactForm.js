@@ -1,9 +1,9 @@
 import { Button, Grid, Link, TextField, Typography } from "@mui/material"
 import React, { useState } from "react"
+import { setBookingForm, setToast } from "../redux/actions"
 
 import { Send } from "mdi-material-ui"
 import { connect } from "react-redux"
-import { setBookingForm } from "../redux/actions"
 
 const ContactForm = ({ dispatch }) => {
   const [fields, setFields] = useState({
@@ -40,13 +40,13 @@ const ContactForm = ({ dispatch }) => {
       }),
     })
       .then(() => {
-        // setToast({
-        //   open: true,
-        //   msg: data.contact_us_contact_form_message_sent[
-        //     `contact_us_contact_form_message_sent_${language}`
-        //   ],
-        //   severity: "success",
-        // })
+        dispatch(
+          setToast({
+            open: true,
+            msg: "Gracias. Responderemos lo antes posible.",
+            severity: "success",
+          })
+        )
         setFields({
           nombre: "",
           email: "",
@@ -54,17 +54,15 @@ const ContactForm = ({ dispatch }) => {
           mensaje: "",
         })
       })
-      .catch(
-        () => {}
-        //   setToast({
-        //     open: true,
-        //     msg: data.contact_us_contact_form_message_failed[
-        //       `contact_us_contact_form_message_failed_${language}`
-        //     ],
-        //     severity: "error",
-        //   })
-        // )
-      )
+      .catch(() => {
+        dispatch(
+          setToast({
+            open: true,
+            msg: "Lo siento. Había un problema. Inténtalo de nuevo.",
+            severity: "error",
+          })
+        )
+      })
   }
   return (
     <>

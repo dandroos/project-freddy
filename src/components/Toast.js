@@ -20,7 +20,12 @@ const Toast = ({ dispatch, toast, open, severity, msg }) => {
         },
       }}
     >
-      <Alert onClose={handleClose} severity={severity} sx={{ width: "100%" }}>
+      <Alert
+        variant="filled"
+        onClose={handleClose}
+        severity={severity}
+        sx={{ width: "100%" }}
+      >
         {msg}
       </Alert>
     </Snackbar>

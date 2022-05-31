@@ -8,6 +8,7 @@ import {
   rgbToHex,
   useTheme,
 } from "@mui/material"
+import { Emoticon, Information } from "mdi-material-ui"
 import { Link, graphql } from "gatsby"
 
 import BackgroundImage from "gatsby-background-image"
@@ -18,7 +19,7 @@ import { connect } from "react-redux"
 import { convertToBgImage } from "gbimage-bridge"
 import { getImage } from "gatsby-plugin-image"
 
-const Index = ({ data, dispatch, siteReady }) => {
+const Index = ({ data, siteReady }) => {
   const theme = useTheme()
 
   return (
@@ -26,7 +27,6 @@ const Index = ({ data, dispatch, siteReady }) => {
       <Seo homepage />
       {siteReady && (
         <>
-          {/* <Seo title="Inicio" /> */}
           <Carousel
             showThumbs={false}
             infiniteLoop
@@ -57,6 +57,13 @@ const Index = ({ data, dispatch, siteReady }) => {
                         </Typography>
                         <Button
                           size="large"
+                          endIcon={(() => {
+                            switch (slide.button.link) {
+                              case 1:
+                              case 2:
+                                return <Information />
+                            }
+                          })()}
                           component={Link}
                           to={(() => {
                             switch (slide.button.link) {

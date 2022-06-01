@@ -19,7 +19,7 @@ import { connect } from "react-redux"
 import { convertToBgImage } from "gbimage-bridge"
 import { getImage } from "gatsby-plugin-image"
 
-const Index = ({ data, siteReady }) => {
+const Index = ({ data, siteReady, isMobile }) => {
   const theme = useTheme()
 
   return (

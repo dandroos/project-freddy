@@ -9,6 +9,10 @@ export const nav = {
       url: "/cursos",
     },
     {
+      label: "Online",
+      url: "/online",
+    },
+    {
       label: "Conócenos",
       url: "/conocenos",
     },

@@ -1,9 +1,10 @@
 import { Dialog, Fab, Portal, Slide } from "@mui/material"
+
 import { Close } from "mdi-material-ui"
+import NavMenu from "./NavMenu"
 import React from "react"
 import { connect } from "react-redux"
 import { setMobileMenu } from "../redux/actions"
-import NavMenu from "./NavMenu"
 
 const MobileMenu = ({ dispatch, isOpen }) => {
   const handleClose = () => {

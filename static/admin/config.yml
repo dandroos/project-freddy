@@ -104,17 +104,14 @@ collections:
         name: header_images
         file: content/images.md
         fields:
-          - label: Cursos (Top) 
+          - label: Cursos 
             name: cursos
             widget: image
-          - label: Cursos (Online)
-            name: cursos_online
+          - label: Online 
+            name: online
             widget: image
           - label: Conócenos
             name: conocenos
-            widget: image
-          - label: FAQ 
-            name: faq
             widget: image
           - label: Contáctenos
             name: contactenos 
@@ -208,6 +205,16 @@ collections:
           # - label: "Online classes text"
           #   name: online_classes
           #   widget: markdown 
+      - label: Online 
+        name: online
+        file: content/online.md
+        fields:
+          - label: Body
+            name: body
+            widget: markdown
+            buttons: ["bold", "italic", "heading-one", "heading-two", "bulleted-list", "link"]
+            editor_components: ["image"]
+            modes: ["rich_text"]
       - label: Información
         name: informacion
         file: content/informacion.md
@@ -235,7 +242,7 @@ collections:
     files:
       - label: Phone and Email
         name: phone_and_email
-        file: content/contact/phone_and_email.md
+        file: contact/phone_and_email.md
         fields:
           - label: Phone number
             name: phone_number
@@ -243,7 +250,7 @@ collections:
             name: email_address
       - label: Social media
         name: social_media
-        file: content/contact/social_media.md
+        file: contact/social_media.md
         fields:
           - label: Facebook username
             name: facebook

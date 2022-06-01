@@ -75,7 +75,7 @@ const NavMenu = ({ dispatch, isMobile }) => {
       minHeight="100vh"
       bgcolor="primary.dark"
       color={theme.palette.primary.contrastText}
-      sx={{ overflowX: "hidden" }}
+      sx={{ overflowX: "hidden", pb: isMobile ? 2 : undefined }}
     >
       <Box
         width="100%"

@@ -17,11 +17,14 @@ const Layout = ({ dispatch, location, children }) => {
 
   useEffect(() => {
     const loadFont = () => {
-      const font = new FontFaceObserver(config.typography.secondary)
-
-      font.load().then(() => {
+      const fontA = new FontFaceObserver(config.typography.secondary)
+      const fontB = new FontFaceObserver(config.typography.primary)
+      Promise.all([fontA.load(), fontB.load()]).then(function () {
         setFontLoaded(true)
       }, loadFont)
+      // font.load().then(() => {
+      //   setFontLoaded(true)
+      // }, loadFont)
     }
     loadFont()
 

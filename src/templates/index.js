@@ -8,11 +8,11 @@ import {
   rgbToHex,
   useTheme,
 } from "@mui/material"
-import { Emoticon, Information } from "mdi-material-ui"
 import { Link, graphql } from "gatsby"
 
 import BackgroundImage from "gatsby-background-image"
 import { Carousel } from "react-responsive-carousel"
+import { Information } from "mdi-material-ui"
 import React from "react"
 import Seo from "../components/seo"
 import { connect } from "react-redux"
@@ -24,7 +24,7 @@ const Index = ({ data, siteReady }) => {
 
   return (
     <>
-      <Seo homepage />
+      <Seo homepage title="" />
       {siteReady && (
         <>
           <Carousel
@@ -61,6 +61,8 @@ const Index = ({ data, siteReady }) => {
                             switch (slide.button.link) {
                               case 1:
                               case 2:
+                                return <Information />
+                              default:
                                 return <Information />
                             }
                           })()}

@@ -15,6 +15,15 @@ module.exports = {
     "gatsby-plugin-redux",
     `gatsby-plugin-image`,
     `gatsby-plugin-netlify-cms`,
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: ["forte"],
+          urls: ["/fonts/fonts.css"],
+        },
+      },
+    },
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -23,6 +32,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {

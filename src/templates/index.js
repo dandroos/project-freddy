@@ -29,6 +29,7 @@ const Index = ({ data, siteReady }) => {
         <>
           <Carousel
             showThumbs={false}
+            showArrows={!isMobile}
             infiniteLoop
             showStatus={false}
             autoPlay={true}

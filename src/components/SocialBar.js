@@ -1,6 +1,7 @@
 import { Box, IconButton } from "@mui/material"
+import { Facebook, Instagram, Twitter } from "mdi-material-ui"
 import { graphql, useStaticQuery } from "gatsby"
-import { Facebook, Instagram } from "mdi-material-ui"
+
 import React from "react"
 
 const SocialBar = () => {
@@ -41,10 +42,24 @@ const SocialBar = () => {
           ":hover": {
             background: "none",
           },
+          mr: 1,
         }}
         color="inherit"
       >
         <Instagram />
+      </IconButton>
+      <IconButton
+        href={`https://twitter.com/elrinconfue`}
+        target="_blank"
+        sx={{
+          backgroundColor: `#1DA1F2`,
+          ":hover": {
+            background: "none",
+          },
+        }}
+        color="inherit"
+      >
+        <Twitter />
       </IconButton>
     </Box>
   )

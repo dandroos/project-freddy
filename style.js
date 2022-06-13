@@ -1,9 +1,9 @@
 module.exports = {
   palette: {
-    main: "#30287a",
+    main: "#83329A",
     // main: "#a28945",
     // main: "#443087",
-    secondary: "#ac3413",
+    secondary: "#D86B18",
     // secondary: "#816C37",
     // secondary: "#ba402b",
     light: "#EBE3E0",

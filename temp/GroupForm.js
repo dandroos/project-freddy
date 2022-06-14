@@ -165,23 +165,6 @@ const GroupForm = ({ isOpen, courses, selected }) => {
           </>
         )}
         <Grid item xs={12}>
-          <FormControl fullWidth>
-            <InputLabel>Curso</InputLabel>
-            <Select
-              value={fields.selectedCourse}
-              label="Curso"
-              name="selectedCourse"
-              onChange={handleChange}
-            >
-              {courses.map((i, ind) => (
-                <MenuItem key={ind} value={i.id}>{`${i.level} - ${i.days.join(
-                  " y "
-                )} - ${i.start_time}-${i.finish_time}`}</MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </Grid>
-        <Grid item xs={12}>
           <TextField
             multiline
             rows={5}

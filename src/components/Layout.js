@@ -3,7 +3,7 @@ import { Box, Fade, Toolbar, useMediaQuery, useTheme } from "@mui/material"
 import React, { useEffect, useState } from "react"
 import { setIsMobile, setSiteReady } from "../redux/actions"
 
-import BookingForm from "./BookingForm"
+import BookingFormDialog from "./BookingFormDialog"
 import FontFaceObserver from "fontfaceobserver"
 import Footer from "./Footer"
 import Header from "./Header"
@@ -44,7 +44,7 @@ const Layout = ({ dispatch, location, children }) => {
         <Box display="flex" minHeight="100vh" flexDirection="column">
           {isMobile && <MobileFab />}
           <Toast />
-          <BookingForm />
+          <BookingFormDialog />
           <Fade in onEntered={() => dispatch(setSiteReady(true))}>
             <Box component="header">
               <Header />

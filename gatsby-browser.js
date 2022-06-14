@@ -1,8 +1,14 @@
-import React from "react"
 import Layout from "./src/components/Layout"
+import NetlifyBookingForms from "./src/components/NetlifyBookingForms"
+import React from "react"
 
 export const wrapPageElement = ({ props, element }) => {
-  return <Layout {...props}>{element}</Layout>
+  return (
+    <>
+      <NetlifyBookingForms />
+      <Layout {...props}>{element}</Layout>
+    </>
+  )
 }
 
 const transitionDelay = 500

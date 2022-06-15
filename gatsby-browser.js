@@ -1,5 +1,4 @@
 import Layout from "./src/components/Layout"
-import NetlifyBookingForms from "./src/components/NetlifyBookingForms"
 import React from "react"
 
 export const wrapPageElement = ({ props, element }) => {

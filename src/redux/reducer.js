@@ -16,7 +16,6 @@ const initialState = {
   courses: [],
   bookingForm: {
     isOpen: false,
-    selectedCourse: null,
   },
   toast: {
     open: false,

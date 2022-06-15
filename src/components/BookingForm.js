@@ -13,10 +13,13 @@ import {
   TextField,
 } from "@mui/material"
 import React, { useState } from "react"
+import { setBookingForm, setToast } from "../redux/actions"
 
-const BookingForm = () => {
+import { connect } from "react-redux"
+
+const BookingForm = ({ dispatch }) => {
   const defaultFields = {
-    type: "",
+    type: "grupos",
     presentation: "",
     name: "",
     email: "",
@@ -62,31 +65,30 @@ const BookingForm = () => {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": "individual",
+        "form-name": "booking",
         ...fields,
       }),
     })
       .then(() => {
-        // setToast({
-        //   open: true,
-        //   msg: data.contact_us_contact_form_message_sent[
-        //     `contact_us_contact_form_message_sent_${language}`
-        //   ],
-        //   severity: "success",
-        // })
+        dispatch(
+          setToast({
+            open: true,
+            msg: "Gracias. Responderemos lo antes posible.",
+            severity: "success",
+          })
+        )
+        dispatch(setBookingForm({ isOpen: false }))
         setFields(defaultFields)
       })
-      .catch(
-        () => {}
-        //   setToast({
-        //     open: true,
-        //     msg: data.contact_us_contact_form_message_failed[
-        //       `contact_us_contact_form_message_failed_${language}`
-        //     ],
-        //     severity: "error",
-        //   })
-        // )
-      )
+      .catch(() => {
+        dispatch(
+          setToast({
+            open: true,
+            msg: "Lo siento. Había un problema. Inténtalo de nuevo.",
+            severity: "error",
+          })
+        )
+      })
   }
 
   return (
@@ -278,4 +280,4 @@ const BookingForm = () => {
   )
 }
 
-export default BookingForm
+export default connect()(BookingForm)

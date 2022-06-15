@@ -61,12 +61,68 @@ const BookingForm = ({ dispatch }) => {
         .join("&")
     }
 
+    let finalFields = {}
+
+    const {
+      type,
+      name,
+      email,
+      tel,
+      comments,
+      currentLevel,
+      thirdParty,
+      studentName,
+      studentAge,
+      presentation,
+      preferredDay,
+      preferredStartTime,
+      preferredFinishTime,
+    } = fields
+
+    if (type === "grupos") {
+      finalFields = {
+        type,
+        name,
+        email,
+        tel,
+        comments,
+        currentLevel,
+      }
+      if (thirdParty) {
+        finalFields = {
+          ...finalFields,
+          studentName,
+          studentAge,
+        }
+      }
+    } else {
+      finalFields = {
+        type,
+        presentation,
+        name,
+        email,
+        tel,
+        comments,
+        currentLevel,
+        preferredDay,
+        preferredStartTime,
+        preferredFinishTime,
+      }
+      if (thirdParty) {
+        finalFields = {
+          ...finalFields,
+          studentName,
+          studentAge,
+        }
+      }
+    }
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": "booking",
-        ...fields,
+        ...finalFields,
       }),
     })
       .then(() => {

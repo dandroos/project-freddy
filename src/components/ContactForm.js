@@ -35,7 +35,7 @@ const ContactForm = ({ dispatch }) => {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": "Contact",
+        "form-name": "contact",
         ...fields,
       }),
     })
@@ -77,14 +77,14 @@ const ContactForm = ({ dispatch }) => {
         . Alternativamente, utilice el siguiente formulario.
       </Typography>
       <form
-        name="Contact"
+        name="contact"
         action="#"
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
       >
-        <input type="hidden" name="form-name" value="Contact" />
+        <input type="hidden" name="form-name" value="contact" />
         <Grid container spacing={2}>
           <Grid item xs={12} md={4}>
             <TextField

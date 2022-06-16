@@ -7,10 +7,10 @@ import { connect } from "react-redux"
 
 const ContactForm = ({ dispatch }) => {
   const [fields, setFields] = useState({
-    nombre: "",
+    name: "",
     email: "",
-    telefono: "",
-    mensaje: "",
+    tel: "",
+    message: "",
   })
 
   const handleChange = e => {
@@ -35,7 +35,7 @@ const ContactForm = ({ dispatch }) => {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": "contact",
+        "form-name": "Contact",
         ...fields,
       }),
     })
@@ -48,10 +48,10 @@ const ContactForm = ({ dispatch }) => {
           })
         )
         setFields({
-          nombre: "",
+          name: "",
           email: "",
-          telefono: "",
-          mensaje: "",
+          tel: "",
+          message: "",
         })
       })
       .catch(() => {
@@ -77,22 +77,22 @@ const ContactForm = ({ dispatch }) => {
         . Alternativamente, utilice el siguiente formulario.
       </Typography>
       <form
-        name="contact"
+        name="Contact"
         action="#"
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
       >
-        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="form-name" value="Contact" />
         <Grid container spacing={2}>
           <Grid item xs={12} md={4}>
             <TextField
               name="name"
-              id="nombre"
+              id="name"
               label="Nombre"
               onChange={handleChange}
-              value={fields.nombre}
+              value={fields.name}
             />
           </Grid>
           <Grid item xs={12} md={4}>
@@ -107,11 +107,11 @@ const ContactForm = ({ dispatch }) => {
           <Grid item xs={12} md={4}>
             <TextField
               name="tel"
-              id="telefono"
+              id="tel"
               label="Teléfono"
               required={false}
               onChange={handleChange}
-              value={fields.telefono}
+              value={fields.tel}
             />
           </Grid>
           <Grid item xs={12}>
@@ -119,10 +119,10 @@ const ContactForm = ({ dispatch }) => {
               name="message"
               multiline
               rows={8}
-              id="mensaje"
+              id="message"
               label="Mensaje"
               onChange={handleChange}
-              value={fields.mensaje}
+              value={fields.message}
             />
           </Grid>
           <Grid item xs={12}>

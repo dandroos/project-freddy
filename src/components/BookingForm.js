@@ -146,7 +146,7 @@ const BookingForm = ({ dispatch }) => {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": "booking",
+        "form-name": "Booking",
         ...finalFields,
       }),
     })
@@ -174,7 +174,7 @@ const BookingForm = ({ dispatch }) => {
 
   return (
     <form
-      name="booking"
+      name="Booking"
       action="#"
       method="POST"
       data-netlify="true"

@@ -5,7 +5,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 
 const SocialBar = () => {
-  const { facebook, instagram } = useStaticQuery(graphql`
+  const { facebook, instagram, twitter } = useStaticQuery(graphql`
     {
       file(
         extension: { eq: "md" }
@@ -17,6 +17,7 @@ const SocialBar = () => {
           frontmatter {
             facebook
             instagram
+            twitter
           }
         }
       }
@@ -49,7 +50,7 @@ const SocialBar = () => {
         <Instagram />
       </IconButton>
       <IconButton
-        href={`https://twitter.com/elrinconfue`}
+        href={`https://twitter.com/${twitter}`}
         target="_blank"
         sx={{
           backgroundColor: `#1DA1F2`,

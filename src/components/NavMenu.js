@@ -150,14 +150,14 @@ const NavMenu = ({ dispatch, isMobile }) => {
               Icon={Phone}
               primary="Llámenos"
               secondary={phoneNumber}
-              url={`tel:${phone_number}`}
+              url={`tel:34${phone_number}`}
               phone
             />
             <ContactMethod
               Icon={Whatsapp}
               primary="WhatsApp"
               secondary={phoneNumber}
-              url={`https://wa.me/${phone_number}`}
+              url={`https://wa.me/34${phone_number}`}
               phone
             />
 

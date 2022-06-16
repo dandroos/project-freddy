@@ -29,16 +29,16 @@ const ContactButtons = () => {
 
   const methods = [
     {
-      label: "Llámanos",
+      label: "Llámenos",
       secondary: phoneNumber,
       Icon: Phone,
-      url: `tel:${phone_number}`,
+      url: `tel:34${phone_number}`,
     },
     {
       label: "WhatsApp",
       secondary: phoneNumber,
       Icon: Whatsapp,
-      url: `https://wa.me/${phone_number}`,
+      url: `https://wa.me/34${phone_number}`,
     },
     {
       label: "Email",

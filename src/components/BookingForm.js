@@ -15,6 +15,7 @@ import {
 import React, { useState } from "react"
 import { setBookingForm, setToast } from "../redux/actions"
 
+import { ThumbUp } from "mdi-material-ui"
 import { connect } from "react-redux"
 
 const BookingForm = ({ dispatch }) => {
@@ -61,9 +62,7 @@ const BookingForm = ({ dispatch }) => {
         .join("&")
     }
 
-    let finalFields = {}
-
-    const {
+    let {
       type,
       name,
       email,
@@ -79,43 +78,69 @@ const BookingForm = ({ dispatch }) => {
       preferredFinishTime,
     } = fields
 
-    if (type === "grupos") {
-      finalFields = {
-        type,
-        name,
-        email,
-        tel,
-        comments,
-        currentLevel,
-      }
-      if (thirdParty) {
-        finalFields = {
-          ...finalFields,
-          studentName,
-          studentAge,
-        }
-      }
-    } else {
-      finalFields = {
-        type,
-        presentation,
-        name,
-        email,
-        tel,
-        comments,
-        currentLevel,
-        preferredDay,
-        preferredStartTime,
-        preferredFinishTime,
-      }
-      if (thirdParty) {
-        finalFields = {
-          ...finalFields,
-          studentName,
-          studentAge,
-        }
-      }
+    if (!thirdParty) {
+      studentName = "N/A"
+      studentAge = "N/A"
     }
+
+    if (type === "grupos") {
+      presentation = "N/A"
+      preferredDay = "N/A"
+      preferredStartTime = "N/A"
+      preferredFinishTime = "N/A"
+    }
+
+    const finalFields = {
+      type,
+      name,
+      email,
+      tel,
+      comments,
+      currentLevel,
+      thirdParty,
+      studentName,
+      studentAge,
+      presentation,
+      preferredDay,
+      preferredStartTime,
+      preferredFinishTime,
+    }
+    //   finalFields = {
+    //     type,
+    //     name,
+    //     email,
+    //     tel,
+    //     comments,
+    //     currentLevel,
+    //   }
+    //   if (thirdParty) {
+    //     finalFields = {
+    //       ...finalFields,
+    //       studentName,
+    //       studentAge,
+    //     }
+    //   }
+    // } else {
+    //   finalFields = {
+    //     type,
+    //     presentation,
+    //     name,
+    //     email,
+    //     tel,
+    //     comments,
+    //     currentLevel,
+    //     preferredDay,
+    //     preferredStartTime,
+    //     preferredFinishTime,
+    //   }
+    //   if (thirdParty) {
+    //     finalFields = {
+    //       ...finalFields,
+    //       studentName,
+    //       studentAge,
+    //     }
+    //   }
+    // }
 
     fetch("/", {
       method: "POST",
@@ -327,7 +352,7 @@ const BookingForm = ({ dispatch }) => {
           />
         </Grid>
         <Grid item xs={12}>
-          <Button fullWidth type="submit">
+          <Button fullWidth type="submit" endIcon={<ThumbUp />}>
             Reservar
           </Button>
         </Grid>

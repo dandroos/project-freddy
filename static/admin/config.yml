@@ -256,3 +256,5 @@ collections:
             name: facebook
           - label: Instagram username
             name: instagram
+          - label: Twitter username
+            name: twitter

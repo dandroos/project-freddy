@@ -61,7 +61,7 @@ const MobileFab = ({ isMobile }) => {
         <ListSubheader>Contacto rápido</ListSubheader>
         <MenuItem
           component="a"
-          href={`tel:${phoneNumber}`}
+          href={`tel:34${phoneNumber}`}
           target="_blank"
           onClick={handleClose}
         >
@@ -72,7 +72,7 @@ const MobileFab = ({ isMobile }) => {
         </MenuItem>
         <MenuItem
           component="a"
-          href={`https://wa.me/${phoneNumber}`}
+          href={`https://wa.me/34${phoneNumber}`}
           target="_blank"
           onClick={handleClose}
         >

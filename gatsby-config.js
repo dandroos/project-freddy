@@ -111,10 +111,10 @@ module.exports = {
         name: `el-rincon-de-idiomas`,
         short_name: `el-rincon`,
         start_url: `/`,
-        background_color: config.palette.main,
+        background_color: "#272066",
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
-        theme_color: config.palette.main,
+        theme_color: "#272066",
         display: `minimal-ui`,
         icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },

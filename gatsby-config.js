@@ -3,10 +3,10 @@ const config = require("./style")
 module.exports = {
   siteMetadata: {
     title: `El Rincón de Idiomas`,
-    description: `El Rincón de Idiomas es una escuela de inglés con sede en Fuerteventura. Somos un centro de preparación de exámenes de Cambridge English.`,
+    description: `El Rincón de Idiomas es una academia de inglés con sede en Fuerteventura. Somos un centro de preparación de exámenes de Cambridge English.`,
     lang: "en",
     author: `@dandrewsdeveloper`,
-    siteUrl: `https://elrincondeidiomas.netlify.app/`,
+    siteUrl: `https://elrincondeidiomas.com/`,
   },
   plugins: [
     "gatsby-plugin-site-wrapper",

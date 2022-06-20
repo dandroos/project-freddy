@@ -3,8 +3,9 @@ import { Facebook, Instagram, Twitter } from "mdi-material-ui"
 import { graphql, useStaticQuery } from "gatsby"
 
 import React from "react"
+import { connect } from "react-redux"
 
-const SocialBar = () => {
+const SocialBar = ({ isMobile }) => {
   const { facebook, instagram, twitter } = useStaticQuery(graphql`
     {
       file(
@@ -25,7 +26,12 @@ const SocialBar = () => {
   `).file.childMarkdownRemark.frontmatter
 
   return (
-    <Box mb={1} display="flex" justifyContent="center">
+    <Box
+      mt={isMobile ? 1 : undefined}
+      mb={1}
+      display="flex"
+      justifyContent="center"
+    >
       <IconButton
         href={`https://facebook.com/${facebook}`}
         target="_blank"
@@ -66,4 +72,8 @@ const SocialBar = () => {
   )
 }
 
-export default SocialBar
+const stp = s => ({
+  isMobile: s.isMobile,
+})
+
+export default connect(stp)(SocialBar)

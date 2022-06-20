@@ -5,6 +5,7 @@ import {
   IconButton,
   Toolbar,
   Typography,
+  useTheme,
 } from "@mui/material"
 import { graphql, navigate, useStaticQuery } from "gatsby"
 
@@ -29,10 +30,15 @@ const Nav = ({ dispatch, isMobile }) => {
     }
   `).site.siteMetadata
 
+  const theme = useTheme()
+
   return isMobile ? (
     <>
       <MobileMenu />
-      <AppBar color="primary">
+      <AppBar
+        color="primary"
+        sx={{ backgroundColor: theme.palette.primary.dark }}
+      >
         <Toolbar>
           <Box
             sx={{ display: "flex", alignItems: "center", cursor: "pointer" }}

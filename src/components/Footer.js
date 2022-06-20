@@ -7,9 +7,10 @@ import {
   useTheme,
 } from "@mui/material"
 import { graphql, useStaticQuery } from "gatsby"
+
+import LocationAndSchedule from "./LocationAndSchedule"
 import React from "react"
 import { connect } from "react-redux"
-import LocationAndSchedule from "./LocationAndSchedule"
 
 const Footer = ({ isMobile }) => {
   const { title } = useStaticQuery(graphql`
@@ -36,9 +37,9 @@ const Footer = ({ isMobile }) => {
     >
       <Container>
         <LocationAndSchedule footer />
-        <Box mt={1}>
+        <Box mt={2}>
           <Typography variant="caption" display="block">
-            All content &copy;{" "}
+            Todo el contenido del sitio &copy;{" "}
             {(() => {
               const currentYear = new Date().getFullYear()
               return currentYear === 2022 ? `2022 ` : `2022 - ${currentYear} `

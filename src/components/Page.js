@@ -17,9 +17,6 @@ import { getImage } from "gatsby-plugin-image"
 
 // import Seo from "./seo"
 
-
-
-
 const Page = ({ children, isMobile, title, image, noCTA }) => {
   const bgImage = convertToBgImage(getImage(image))
   const theme = useTheme()
@@ -28,6 +25,15 @@ const Page = ({ children, isMobile, title, image, noCTA }) => {
       {/* <Seo title={title} /> */}
       <BackgroundImage {...bgImage} placeholder="blurred">
         <Box width="100%" height={isMobile ? 200 : 400}>
+          <Box
+            position="absolute"
+            zIndex={-50}
+            top={0}
+            bottom={0}
+            left={0}
+            right={0}
+            bgcolor={`${rgbToHex(theme.palette.primary.dark)}66`}
+          />
           <Box
             width="100%"
             pt={2}

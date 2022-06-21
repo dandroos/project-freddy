@@ -9,8 +9,9 @@ module.exports = {
     // secondary: "#ac3413",
     // secondary: "#816C37",
     // secondary: "#ba402b",
-    light: "#EBE3E0",
-    dark: "#1F1714",
+    light: "#ECF0F9",
+    dark: "#070C17",
+    // dark: "#1F1714",
   },
   typography: {
     primary: "forte",

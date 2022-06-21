@@ -19,7 +19,7 @@ exports.createPages = async ({ actions }) => {
   const { createPage } = actions
 
   const { light } = palette
-  const dark = palette.main
+  const dark = "#203767"
 
   createPage({
     path: "/",

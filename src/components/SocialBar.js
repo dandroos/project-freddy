@@ -35,7 +35,7 @@ const SocialBar = ({ isMobile }) => {
       <IconButton
         href={`https://facebook.com/${facebook}`}
         target="_blank"
-        sx={{ backgroundColor: "#4267B2", mr: 1 }}
+        sx={{ backgroundColor: "#4267B2", mr: 2 }}
         color="inherit"
       >
         <Facebook />
@@ -49,7 +49,7 @@ const SocialBar = ({ isMobile }) => {
           ":hover": {
             background: "none",
           },
-          mr: 1,
+          mr: 2,
         }}
         color="inherit"
       >

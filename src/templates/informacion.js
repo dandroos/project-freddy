@@ -1,31 +1,23 @@
+import HeadComponent from "../components/Head"
 import HtmlParser from "../components/HtmlParser"
 import Page from "../components/Page"
 import React from "react"
-import Seo from "../components/seo"
-import { connect } from "react-redux"
 import { graphql } from "gatsby"
 
-const Informacion = ({ data, siteReady }) => {
+const Informacion = ({ data }) => {
   return (
-    <>
-      <Seo title="Información" />
-      {siteReady && (
-        <Page
-          title="Información"
-          image={data.headerImage.childMarkdownRemark.frontmatter.informacion}
-        >
-          <HtmlParser input={data.body.childMarkdownRemark.html} />
-        </Page>
-      )}
-    </>
+    <Page
+      title="Información"
+      image={data.headerImage.childMarkdownRemark.frontmatter.informacion}
+    >
+      <HtmlParser input={data.body.childMarkdownRemark.html} />
+    </Page>
   )
 }
 
-const stp = s => ({
-  siteReady: s.siteReady,
-})
+export default Informacion
 
-export default connect(stp)(Informacion)
+export const Head = () => <HeadComponent title="Información" />
 
 export const query = graphql`
   query ($light: String!, $dark: String!) {

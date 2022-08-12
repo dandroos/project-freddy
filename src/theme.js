@@ -46,7 +46,7 @@ export const theme = responsiveFontSizes(
         fontSize: "1.15rem",
       },
       nav: {
-        fontSize: "1.1rem",
+        fontSize: "1rem",
         lineHeight: 1,
         textTransform: "uppercase",
         letterSpacing: 1.5,

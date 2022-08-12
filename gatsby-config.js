@@ -10,8 +10,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-site-wrapper",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-emotion",
+    "gatsby-plugin-mui-emotion",
     "gatsby-plugin-redux",
     `gatsby-plugin-image`,
     `gatsby-plugin-netlify-cms`,
@@ -32,14 +31,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `articles`,
-    //     path: `${__dirname}/content/articles`,
-    //   },
-    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -54,14 +45,6 @@ module.exports = {
         path: `${__dirname}/contact`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `courses`,
-    //     path: `${__dirname}/content/courses`,
-    //   },
-    // },
-
     `gatsby-transformer-sharp`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-sharp`,
@@ -75,17 +58,6 @@ module.exports = {
             options: {
               staticFolderName: "content/site_images",
             },
-            // options: {
-            // [Optional] The root of "media_folder" in your config.yml
-            // Defaults to "static"
-            // staticFolderName: 'static',
-            // [Optional] Include the following fields, use dot notation for nested fields
-            // All fields are included by default
-            // include: ['featured'],
-            // [Optional] Exclude the following fields, use dot notation for nested fields
-            // No fields are excluded by default
-            // exclude: ['featured.skip'],
-            // },
           },
           {
             resolve: `gatsby-remark-images`,

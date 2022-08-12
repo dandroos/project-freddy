@@ -71,27 +71,6 @@ const BookingFormDialog = ({ dispatch, isOpen, selected, form, isMobile }) => {
               electrónico de confirmación.
             </Alert>
           </Box>
-          {/* <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <RadioGroup
-                name="type"
-                row
-                value={fields.type}
-                onChange={handleChange}
-              >
-                <FormControlLabel
-                  value="grupos"
-                  control={<Radio />}
-                  label="Grupos"
-                />
-                <FormControlLabel
-                  value="individuales"
-                  control={<Radio />}
-                  label="Individuales"
-                />
-              </RadioGroup>
-            </Grid>
-          </Grid> */}
           <BookingForm />
         </DialogContent>
       </Dialog>

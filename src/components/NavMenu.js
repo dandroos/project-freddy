@@ -4,6 +4,7 @@ import {
   Grid,
   List,
   ListItemButton,
+  ListItemIcon,
   ListItemText,
   Typography,
   useTheme,
@@ -44,27 +45,35 @@ const NavMenu = ({ dispatch, isMobile }) => {
     6
   )} ${phone_number.slice(6, 9)}`
   const ContactMethod = ({ Icon, primary, secondary, url, phone }) => (
-    <Grid item xs={12} md={!isMobile && phone ? 6 : undefined}>
-      <Button
-        fullWidth
-        color="secondary"
-        sx={{ display: "block", textAlign: "center" }}
-        component="a"
-        href={url}
-        target="_blank"
-      >
-        <Icon sx={{ display: "block", m: "auto" }} />
-        <Typography variant="subtitle1">{primary}</Typography>
-        <Typography
-          display="block"
-          variant="overline"
-          sx={{ lineHeight: 0.65, mb: 0.5 }}
-          textTransform="lowercase"
-        >
-          {secondary}
-        </Typography>
-      </Button>
-    </Grid>
+    <ListItemButton
+      sx={{ py: 0 }}
+      button
+      component="a"
+      href={url}
+      target="_blank"
+      divider
+    >
+      <ListItemIcon>
+        <Icon sx={{ color: theme.palette.common.white }} />
+      </ListItemIcon>
+      <ListItemText
+        sx={{ py: 0 }}
+        primary={primary}
+        primaryTypographyProps={{
+          variant: "overline",
+          letterSpacing: 1.1,
+          textTransform: "uppercase",
+          lineHeight: 2,
+        }}
+        secondary={secondary}
+        secondaryTypographyProps={{
+          variant: "caption",
+          fontSize: 12,
+          lineHeight: 1.1,
+          color: "common.black",
+        }}
+      />
+    </ListItemButton>
   )
   return (
     <Box
@@ -91,7 +100,7 @@ const NavMenu = ({ dispatch, isMobile }) => {
         <StaticImage
           src="../images/logo-white.png"
           alt="El Rincón de Idiomas logo"
-          width={200}
+          width={180}
           imgStyle={{ height: "100%" }}
           placeholder="none"
         />
@@ -144,8 +153,9 @@ const NavMenu = ({ dispatch, isMobile }) => {
       </List>
       <SocialBar />
       {!isMobile && (
-        <Box m={1}>
-          <Grid container spacing={1}>
+        <Box mt={1} bgcolor="secondary.main" color="common.white">
+          {/* <Grid container spacing={1}> */}
+          <List dense disablePadding>
             <ContactMethod
               Icon={Phone}
               primary="Llámenos"
@@ -167,7 +177,8 @@ const NavMenu = ({ dispatch, isMobile }) => {
               secondary={email_address}
               url={`mailto:${email_address}`}
             />
-          </Grid>
+          </List>
+          {/* </Grid> */}
         </Box>
       )}
     </Box>

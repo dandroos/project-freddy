@@ -1,9 +1,5 @@
 export const nav = {
   internal: [
-    // {
-    //   label: "Noticias",
-    //   url: "/noticias",
-    // },
     {
       label: "Cursos",
       url: "/cursos",

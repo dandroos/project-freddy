@@ -83,38 +83,6 @@ const Nav = ({ dispatch, isMobile }) => {
       elevation={4}
     >
       <NavMenu />
-      {/* <Box
-        py={4}
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        width="100%"
-        minHeight="100vh"
-        bgcolor="primary.dark"
-        color={theme.palette.primary.contrastText}
-      >
-        <StaticImage
-          src="../images/logo-white.png"
-          width={275}
-          style={{ marginBottom: 15 }}
-        />
-        <List sx={{ width: "100%" }}>
-          {nav.internal.map(i => (
-            <ListItem
-              button
-              component={Link}
-              to={i.url}
-              sx={{ textAlign: "center" }}
-            >
-              <ListItemText
-                primary={i.label}
-                // disableTypography
-                primaryTypographyProps={{ variant: "nav" }}
-              />
-            </ListItem>
-          ))}
-        </List>
-      </Box> */}
     </Drawer>
   )
 }

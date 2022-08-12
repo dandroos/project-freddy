@@ -20,7 +20,6 @@ const Page = ({ children, isMobile, title, image, noCTA }) => {
   const theme = useTheme()
   return (
     <>
-      {/* <Seo title={title} /> */}
       <BackgroundImage {...bgImage} placeholder="blurred">
         <Box width="100%" height={isMobile ? 200 : 400}>
           <Box
@@ -51,7 +50,7 @@ const Page = ({ children, isMobile, title, image, noCTA }) => {
           </Box>
         </Box>
       </BackgroundImage>
-      <Container maxWidth="md" sx={{ mt: 1 }}>
+      <Container maxWidth="md" sx={{ mt: 2 }}>
         {children}
         {!noCTA && (
           <Box my={2} textAlign="center">

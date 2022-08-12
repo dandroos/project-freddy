@@ -3,9 +3,7 @@ import { FacebookMessenger, Phone, Whatsapp } from "mdi-material-ui"
 import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import { connect } from "react-redux"
-
-const MobileFab = ({ isMobile }) => {
+const MobileFab = () => {
   const [anchorEl, setAnchorEl] = useState(null)
 
   const data = useStaticQuery(graphql`
@@ -97,7 +95,4 @@ const MobileFab = ({ isMobile }) => {
   )
 }
 
-const stp = s => ({
-  isMobile: s.isMobile,
-})
-export default connect(stp)(MobileFab)
+export default MobileFab

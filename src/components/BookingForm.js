@@ -105,42 +105,6 @@ const BookingForm = ({ dispatch }) => {
       preferredStartTime,
       preferredFinishTime,
     }
-    //   finalFields = {
-    //     type,
-    //     name,
-    //     email,
-    //     tel,
-    //     comments,
-    //     currentLevel,
-    //   }
-    //   if (thirdParty) {
-    //     finalFields = {
-    //       ...finalFields,
-    //       studentName,
-    //       studentAge,
-    //     }
-    //   }
-    // } else {
-    //   finalFields = {
-    //     type,
-    //     presentation,
-    //     name,
-    //     email,
-    //     tel,
-    //     comments,
-    //     currentLevel,
-    //     preferredDay,
-    //     preferredStartTime,
-    //     preferredFinishTime,
-    //   }
-    //   if (thirdParty) {
-    //     finalFields = {
-    //       ...finalFields,
-    //       studentName,
-    //       studentAge,
-    //     }
-    //   }
-    // }
 
     fetch("/", {
       method: "POST",

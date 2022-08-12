@@ -12,7 +12,7 @@ import LocationAndSchedule from "./LocationAndSchedule"
 import React from "react"
 import { connect } from "react-redux"
 
-const Footer = ({ isMobile }) => {
+const Footer = ({ hideMap, isMobile }) => {
   const { title } = useStaticQuery(graphql`
     {
       site {
@@ -36,8 +36,8 @@ const Footer = ({ isMobile }) => {
       }}
     >
       <Container>
-        <LocationAndSchedule footer />
-        <Box mt={2}>
+        {!hideMap && <LocationAndSchedule footer />}
+        <Box mt={!hideMap && 2}>
           <Typography variant="caption" display="block">
             Todo el contenido del sitio &copy;{" "}
             {(() => {
@@ -49,11 +49,12 @@ const Footer = ({ isMobile }) => {
           <Typography variant="caption">
             Sitio web:{" "}
             <Link
-              href="mailto:dandrewsuk82@gmail.com"
+              href="https://daveandrews.dev"
+              target="_blank"
               color="common.white"
               underline="hover"
             >
-              David Andrews
+              Dave Andrews
             </Link>
           </Typography>
         </Box>

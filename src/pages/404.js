@@ -1,13 +1,18 @@
 import * as React from "react"
 
-import Seo from "../components/seo"
+import { Container, Typography } from "@mui/material"
+
+import HeadComponent from "../components/Head"
 
 const NotFoundPage = () => (
-  <>
-    <Seo title="404: Not found" />
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </>
+  <Container>
+    <Typography variant="h1" variantMapping={{ h1: "h2" }}>
+      ¡Ups!
+    </Typography>
+    <Typography>{`No hay una página aquí. :(`}</Typography>
+  </Container>
 )
 
 export default NotFoundPage
+
+export const Head = () => <HeadComponent title="404: ¡Ups!" />

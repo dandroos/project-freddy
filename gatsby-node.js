@@ -62,14 +62,6 @@ exports.createPages = async ({ actions }) => {
       dark,
     },
   })
-  // createPage({
-  //   path: "/reservar",
-  //   component: path.resolve("src/templates/reservar.js"),
-  //   context: {
-  //     light,
-  //     dark,
-  //   },
-  // })
   createPage({
     path: "/contactenos",
     component: path.resolve("src/templates/contactenos.js"),

@@ -20,11 +20,8 @@ const Layout = ({ dispatch, location, children }) => {
       const fontA = new FontFaceObserver(config.typography.secondary)
       const fontB = new FontFaceObserver(config.typography.primary)
       Promise.all([fontA.load(), fontB.load()]).then(function () {
-        setFontLoaded(true)
+        dispatch(setSiteReady(true))
       }, loadFont)
-      // font.load().then(() => {
-      //   setFontLoaded(true)
-      // }, loadFont)
     }
     loadFont()
 
@@ -40,62 +37,54 @@ const Layout = ({ dispatch, location, children }) => {
 
   return (
     <>
-      {fontLoaded && (
-        <Box display="flex" minHeight="100vh" flexDirection="column">
-          {isMobile && <MobileFab />}
-          <Toast />
-          <BookingFormDialog />
-          <Fade in onEntered={() => dispatch(setSiteReady(true))}>
-            <Box component="header">
-              <Header />
-            </Box>
-          </Fade>
-          <AnimatePresence exitBeforeEnter>
+      <Box display="flex" minHeight="100vh" flexDirection="column">
+        {isMobile && <MobileFab />}
+        <Toast />
+        <BookingFormDialog />
+        <Box component="header">
+          <Header />
+        </Box>
+        <AnimatePresence exitBeforeEnter>
+          <Box
+            sx={
+              isMobile
+                ? undefined
+                : { width: `calc(100% - 300px)`, ml: `300px` }
+            }
+            display="flex"
+            flexDirection="column"
+            flexGrow={1}
+            justifyContent="space-between"
+            key={location.pathname}
+            component={motion.div}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <Box
-              sx={
-                isMobile
-                  ? undefined
-                  : { width: `calc(100% - 300px)`, ml: `300px` }
-              }
+              component="main"
               display="flex"
               flexDirection="column"
+              minHeight="100vh"
               flexGrow={1}
-              justifyContent="space-between"
-              key={location.pathname}
-              component={motion.div}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
+              sx={{ pb: location.pathname !== "/" ? 2 : 0 }}
             >
-              <Box
-                component="main"
-                display="flex"
-                flexDirection="column"
-                minHeight="100vh"
-                flexGrow={1}
-                sx={{ pb: location.pathname !== "/" ? 2 : 0 }}
-              >
-                {isMobile && location.pathname !== "/" && <Toolbar />}
-                {children}
-              </Box>
-              <Box
-                component="footer"
-                color="primary.contrastText"
-                textAlign="center"
-              >
-                <Footer />
-              </Box>
+              {isMobile && location.pathname !== "/" && <Toolbar />}
+              {children}
             </Box>
-          </AnimatePresence>
-        </Box>
-      )}
+            <Box
+              component="footer"
+              color="primary.contrastText"
+              textAlign="center"
+            >
+              <Footer hideMap={location.pathname === "/contactenos"} />
+            </Box>
+          </Box>
+        </AnimatePresence>
+      </Box>
     </>
   )
 }
 
-const stp = s => ({
-  siteReady: s.siteReady,
-})
-
-export default connect(stp)(Layout)
+export default connect()(Layout)

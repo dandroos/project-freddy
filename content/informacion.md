@@ -4,10 +4,10 @@ Los cursos que ofrecemos son de dos días a la semana con una duración de 50 mi
 
 El centro imparte clases mensuales, por hora y online.\
 \
-De infantil a bachillerato 45€ por mes.\
+De infantil a bachillerato 50€ por mes.\
 \
 Adultos: Cursos grupales 60€ por mes.\
-Adultos: Clases individuales 15€ la hora.\
+Adultos: Clases individuales 20€ la hora.\
 Clases online concretar hora y tarifa.\
 Los pagos se pueden realizar en efectivo, por bizum, tarjeta o transferencia.\
 \
@@ -17,7 +17,7 @@ Hay meses en los que habrá más días de clase y otros meses menos días de cla
 
 # Matricula
 
-Habrá que realizar el pago de matrícula de 10€ para reservar plaza para el siguiente curso. Si reserva plaza de matrícula y al inicio de curso no se incorpora no se realizará devolución, si no se puede incorporar hasta octubre mantenernos informados.
+Habrá que realizar el pago de matrícula de 12€ para reservar plaza para el siguiente curso. Si reserva plaza de matrícula y al inicio de curso no se incorpora no se realizará devolución, si no se puede incorporar hasta octubre mantenernos informados.
 
 # Libros y material
 

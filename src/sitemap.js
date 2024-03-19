@@ -17,6 +17,15 @@ export const nav = {
       url: "/informacion",
     },
     {
+      label: "Oxford Test of English",
+      url: "/oxford-test-of-english",
+    },
+    {
+      label: "Cambridge",
+      url: "/cambridge",
+    },
+
+    {
       label: "Contáctenos",
       url: "/contactenos",
     },

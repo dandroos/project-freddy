@@ -1,12 +1,9 @@
 import {
   Box,
-  Button,
-  Grid,
   List,
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  Typography,
   useTheme,
 } from "@mui/material"
 import { Email, Phone, Whatsapp } from "mdi-material-ui"
@@ -143,6 +140,7 @@ const NavMenu = ({ dispatch, isMobile }) => {
                   fontWeight: "inherit",
                   letterSpacing: "inherit",
                   sx: {
+                    mt: 0,
                     transition: "all .3s",
                   },
                 }}

@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion"
-import { Box, Fade, Toolbar, useMediaQuery, useTheme } from "@mui/material"
+import { Box, Toolbar, useMediaQuery, useTheme } from "@mui/material"
 import React, { useEffect, useState } from "react"
 import { setIsMobile, setSiteReady } from "../redux/actions"
 
@@ -13,8 +13,6 @@ import config from "../../style"
 import { connect } from "react-redux"
 
 const Layout = ({ dispatch, location, children }) => {
-  const [fontLoaded, setFontLoaded] = useState(false)
-
   useEffect(() => {
     const loadFont = () => {
       const fontA = new FontFaceObserver(config.typography.secondary)

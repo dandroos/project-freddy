@@ -4,7 +4,7 @@ backend:
   branch: master
 media_folder: content/site_images
 collections:
-  - label: Site content 
+  - label: Site content
     name: content
     media_folder: ./site_images
     public_folder: site_images
@@ -15,17 +15,17 @@ collections:
         name: header_images
         file: content/images.md
         fields:
-          - label: Cursos 
+          - label: Cursos
             name: cursos
             widget: image
-          - label: Online 
+          - label: Online
             name: online
             widget: image
           - label: Conócenos
             name: conocenos
             widget: image
           - label: Contáctenos
-            name: contactenos 
+            name: contactenos
             widget: image
       - label: Homepage
         name: homepage
@@ -56,38 +56,80 @@ collections:
                         name: link
                         widget: select
                         options:
-                          - {label: Courses page, value: 1}
-                          - {label: About page, value: 2}
-                          - {label: Information page, value: 3}
-                          - {label: Contact page, value: 4}
+                          - { label: Courses page, value: 1 }
+                          - { label: About page, value: 2 }
+                          - { label: Information page, value: 3 }
+                          - { label: Contact page, value: 4 }
       - label: Cursos
         name: cursos
         file: content/courses.md
         fields:
-            - label: Body
-              name: body
-              widget: markdown
-              buttons: ["bold", "italic", "heading-one", "heading-two", "bulleted-list", "link"]
-              editor_components: []
-              modes: ["rich_text"]
-      - label: Online 
+          - label: Body
+            name: body
+            widget: markdown
+            buttons:
+              [
+                "bold",
+                "italic",
+                "heading-one",
+                "heading-two",
+                "bulleted-list",
+                "link",
+              ]
+            editor_components: []
+            modes: ["rich_text"]
+      - label: Online
         name: online
         file: content/online.md
         fields:
           - label: Body
             name: body
             widget: markdown
-            buttons: ["bold", "italic", "heading-one", "heading-two", "bulleted-list", "link"]
+            buttons:
+              [
+                "bold",
+                "italic",
+                "heading-one",
+                "heading-two",
+                "bulleted-list",
+                "link",
+              ]
             editor_components: ["image"]
             modes: ["rich_text"]
-      - label: Información
-        name: informacion
-        file: content/informacion.md
+      - label: Oxford Test of English
+        name: oxford-test-of-english
+        file: content/oxford-test-of-english.md
         fields:
           - label: Body
             name: body
             widget: markdown
-            buttons: ["bold", "italic", "heading-one", "heading-two", "bulleted-list", "link"]
+            buttons:
+              [
+                "bold",
+                "italic",
+                "heading-one",
+                "heading-two",
+                "bulleted-list",
+                "link",
+              ]
+            editor_components: []
+            modes: ["rich_text"]
+      - label: Cambridge
+        name: cambridge
+        file: content/cambridge.md
+        fields:
+          - label: Body
+            name: body
+            widget: markdown
+            buttons:
+              [
+                "bold",
+                "italic",
+                "heading-one",
+                "heading-two",
+                "bulleted-list",
+                "link",
+              ]
             editor_components: []
             modes: ["rich_text"]
       - label: Conócenos
@@ -97,7 +139,15 @@ collections:
           - label: Body
             name: body
             widget: markdown
-            buttons: ["bold", "italic", "heading-one", "heading-two", "bulleted-list", "link"]
+            buttons:
+              [
+                "bold",
+                "italic",
+                "heading-one",
+                "heading-two",
+                "bulleted-list",
+                "link",
+              ]
             editor_components: []
             modes: ["rich_text"]
   - label: Contact

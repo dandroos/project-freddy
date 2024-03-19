@@ -55,6 +55,22 @@ exports.createPages = async ({ actions }) => {
     },
   })
   createPage({
+    path: "/oxford-test-of-english",
+    component: path.resolve("src/templates/oxford-test-of-english.js"),
+    context: {
+      light,
+      dark,
+    },
+  })
+  createPage({
+    path: "/cambridge",
+    component: path.resolve("src/templates/cambridge.js"),
+    context: {
+      light,
+      dark,
+    },
+  })
+  createPage({
     path: "/online",
     component: path.resolve("src/templates/online.js"),
     context: {

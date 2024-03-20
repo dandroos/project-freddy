@@ -97,8 +97,8 @@ collections:
             editor_components: ["image"]
             modes: ["rich_text"]
       - label: Oxford Test of English
-        name: oxford-test-of-english
-        file: content/oxford-test-of-english.md
+        name: oxford_test_of_english
+        file: content/oxford_test_of_english.md
         fields:
           - label: Body
             name: body

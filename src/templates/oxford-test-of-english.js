@@ -3,6 +3,8 @@ import HtmlParser from "../components/HtmlParser"
 import Page from "../components/Page"
 import React from "react"
 import { graphql } from "gatsby"
+import { Box } from "@mui/material"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Oxford = ({ data }) => {
   return (
@@ -10,6 +12,9 @@ const Oxford = ({ data }) => {
       title="Oxford Test of English"
       image={data.headerImage.childMarkdownRemark.frontmatter.oxford}
     >
+      <Box mb={2}>
+        <StaticImage src="../images/oxford-test-of-english.png" />
+      </Box>
       <HtmlParser input={data.body.childMarkdownRemark.html} />
     </Page>
   )

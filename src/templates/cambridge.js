@@ -3,6 +3,8 @@ import HtmlParser from "../components/HtmlParser"
 import Page from "../components/Page"
 import React from "react"
 import { graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import { Box } from "@mui/material"
 
 const Cambridge = ({ data }) => {
   return (
@@ -10,6 +12,9 @@ const Cambridge = ({ data }) => {
       title="Cambridge"
       image={data.headerImage.childMarkdownRemark.frontmatter.cambridge}
     >
+      <Box mb={2}>
+        <StaticImage src="../images/cambridge-header-image.png" />
+      </Box>
       <HtmlParser input={data.body.childMarkdownRemark.html} />
     </Page>
   )

@@ -24,6 +24,12 @@ collections:
           - label: Conócenos
             name: conocenos
             widget: image
+          - label: Cambridge
+            name: cambridge
+            widget: image
+          - label: Oxford Test of English
+            name: oxford
+            widget: image
           - label: Contáctenos
             name: contactenos
             widget: image

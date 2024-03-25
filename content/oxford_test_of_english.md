@@ -12,8 +12,6 @@ El Rincón de Idiomas realiza convocatorias todos los meses. **Esta prueba se r
 
 **Convocatorias todos los meses**
 
-Convocatorías de Oxford Test of English.
-
 ### Precios
 
 * A2: 140€

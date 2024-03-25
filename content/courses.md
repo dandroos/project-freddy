@@ -9,7 +9,7 @@ Los cursos que ofrecemos son de dos días a la semana con una duración de 50 mi
 
 Impartimos cursos a todos los niveles desde infantil hasta Bachillerato.
 
-Somos un centro oficial de preparación de los exámenes de Cambridge y preparamos a nuestros alumnos para los siguientes exámenes:
+A﻿filiado con Oxford Test of English y somos un centro oficial de preparación de los exámenes de Cambridgey y preparamos a nuestros alumnos para los siguientes exámenes: 
 
 **Para los más pequeños (Young learners YLE)**
 

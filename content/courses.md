@@ -1,5 +1,3 @@
----
----
 # ¿Qué cursos ofrecemos?
 
 Los cursos que ofrecemos son de dos días a la semana con una duración de 50 minutos.
@@ -37,6 +35,6 @@ Si quieres mejorar tus habilidades lingüísticas en el ámbito laboral, prepár
 
 Practicar conversación con un nativo es lo mejor, no solo practicar el hablarlo sino descubriendo nuestra cultura.
 
-Además de inglés, ofrecemos cursos de Alemán y Francés en grupo o individual.
+Además de inglés, ofrecemos cursos de Francés en grupo o individual.
 
-Clases de conversación online: Inglés, Alemán, Francés e Italiano.
+Clases de conversación online: Inglés,, Francés e Italiano.

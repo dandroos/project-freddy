@@ -22,14 +22,14 @@ El Rincón de Idiomas realiza convocatorias todos los meses. **Esta prueba se r
 
 ### FECHAS DE LOS EXÁMENES 2024
 
-Durante los meses de verano puede elegir la fecha y la hora siempre que nos avise con 3 semanas de antelación.
+Durante losmeses de verano puede elegir la fecha y la hora siempre que nos avise con 3 semanas de antelación.
 
 **S﻿EPTIEMBRE**
 
-* 20/.0......17.00hrs
-* 23/9...........10.00hrs
-* 27/1...........17.00hrs
-* 30/1...........10.00hrs
+* 20/9.....17.00hrs
+* 23/9......10.00hrs
+* 27/9.......17.00hr
+* 30/9........10.00hrs
 
 **O﻿CTUBRE**
 

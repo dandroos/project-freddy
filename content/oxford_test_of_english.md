@@ -24,7 +24,7 @@ El Rincón de Idiomas realiza convocatorias todos los meses. **Esta prueba se r
 
 Durante los meses de verano puede elegir la fecha y la hora siempre que nos avise con 3 semanas de antelación.
 
-**S﻿EPTIMBRE**
+**S﻿EPTIEMBRE**
 
 * 20/.0......17.00hrs
 * 23/9...........10.00hrs
@@ -56,7 +56,5 @@ Durante los meses de verano puede elegir la fecha y la hora siempre que nos avis
 * 1﻿3/12.........17:00
 * 1﻿6/12.........10.00
 * 20/12........17:00
-
-
 
 Si alguna de éstas fechas no fuera compatible, póngase en contacto con nosotros y encontraremos una alternativa.

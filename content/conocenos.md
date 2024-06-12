@@ -10,4 +10,4 @@ Trabajamos con profesorado nativo de Reino Unido y Estados Unidos, con experienc
 
 Siendo nativos garantizamos el aprendizaje y mejora de las habilidades lingüísticas y también el conocimiento de otra cultura.
 
-Somos de diferentes lugares de Reino Unido y Estados Unidos por lo que tenemos  diferentes acentos que ayudan al mejor entendimiento del inglés.
+Somos de diferentes lugares de Reino Unido y Estados Unidos por lo que tenemos  diferentes acentos que ayudan al mejor entendimiento del inglés y la cultura de nuestros países, que estamos orgullosos de compartir.

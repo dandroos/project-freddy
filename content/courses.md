@@ -62,7 +62,7 @@ Los cursos que ofrecemos son de dos días a la semana con una duración de 50 mi
 
 Impartimos cursos a todos los niveles desde infantil hasta Bachillerato.
 
-Somos un centro oficial de preparación de los exámenes de Cambridge y preparamos a nuestros alumnos para los siguientes exámenes:
+Preparamos a nuestros alumnos para los siguientes exámenes:
 
 **Para los más pequeños (Young learners YLE)**
 
@@ -88,6 +88,6 @@ Si quieres mejorar tus habilidades lingüísticas en el ámbito laboral, prepár
 
 Practicar conversación con un nativo es lo mejor, no solo practicar el hablarlo sino descubriendo nuestra cultura.
 
-Además de inglés, ofrecemos cursos de Alemán y Francés en grupo o individual.
+Además de inglés, ofrecemos cursos de Francés en grupo o individual.
 
-Clases de conversación online: Inglés, Alemán, Francés e Italiano.
+Clases de conversación online: Inglés, Francés e Italiano.

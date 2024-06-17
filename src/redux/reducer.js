@@ -1,5 +1,6 @@
 import {
   SET_BOOKING_FORM,
+  SET_CLASES_DIALOG,
   SET_COURSES,
   SET_FONT_LOADED,
   SET_IS_MOBILE,
@@ -22,12 +23,18 @@ const initialState = {
     msg: "",
     severity: "success",
   },
+  clases: {
+    isOpen: false,
+  },
 }
 
 export const reducer = (state = initialState, { type, payload }) => {
   const newState = Object.assign({}, state)
 
   switch (type) {
+    case SET_CLASES_DIALOG:
+      newState.clases.isOpen = payload
+      break
     case SET_FONT_LOADED:
       newState.fontLoaded = payload
       break

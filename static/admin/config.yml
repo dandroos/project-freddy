@@ -70,6 +70,26 @@ collections:
         name: cursos
         file: content/courses.md
         fields:
+          - label: Current Classes button text
+            name: clases_button_text
+          - label: Current Classes window title
+            name: clases_title
+          - label: Current Classes intro
+            name: clases_intro
+          - label: Clases
+            name: clases
+            widget: list
+            fields:
+              - label: Clase
+                name: clase
+                widget: object
+                fields:
+                  - label: Name
+                    name: name
+                  - label: Days
+                    name: days
+                  - label: Time
+                    name: time
           - label: Body
             name: body
             widget: markdown

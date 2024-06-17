@@ -1,5 +1,6 @@
 import {
   SET_BOOKING_FORM,
+  SET_CLASES_DIALOG,
   SET_COURSES,
   SET_FONT_LOADED,
   SET_IS_MOBILE,
@@ -7,6 +8,11 @@ import {
   SET_SITE_READY,
   SET_TOAST,
 } from "./types"
+
+export const setClasesDialog = payload => ({
+  type: SET_CLASES_DIALOG,
+  payload,
+})
 
 export const setFontLoaded = payload => ({
   type: SET_FONT_LOADED,

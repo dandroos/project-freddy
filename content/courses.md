@@ -1,8 +1,8 @@
 ---
 clases_button_text: Consultar los horarios de todas las clases
 clases_title: Nuestras clases
-clases_intro: Estas son nuestras clases para el año escolar 2024/2025.
-  Por favor, póngase en contacto con nosotros para comprobar la disponibilidad.
+clases_intro: Estas son nuestras clases para el año escolar 2024/2025. Por
+  favor, póngase en contacto con nosotros para comprobar la disponibilidad.
   Gracias.
 clases:
   - clase:
@@ -48,6 +48,14 @@ clases:
   - clase:
       name: 4º ESO
       days: Martes y Jueves
+      time: 16:00 - 16:50
+  - clase:
+      name: 1º BACHILLERATO
+      days: Lunes y Miércoles
+      time: 17:00 - 17:50
+  - clase:
+      name: 2º BACHILLERATO
+      days: Lunes y Miércoles
       time: 16:00 - 16:50
 ---
 

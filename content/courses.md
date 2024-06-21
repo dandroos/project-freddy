@@ -57,6 +57,14 @@ clases:
       name: 2º BACHILLERATO
       days: Lunes y Miércoles
       time: 16:00 - 16:50
+  - clase:
+      name: C1
+      days: Lunes y Miércoles
+      time: 18:10 - 19:00
+  - clase:
+      name: C2
+      days: Viernes
+      time: 15:00 - 17:00
 ---
 
 # ¿Qué cursos ofrecemos?

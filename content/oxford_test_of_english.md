@@ -57,4 +57,6 @@ Durante los meses de verano puede elegir la fecha y la hora siempre que nos avis
 * 1﻿6/12.........10.00
 * 20/12........17:00
 
+C﻿uando eliges la fecha por favor avísenos con 3 meses de antelación.
+
 Si alguna de éstas fechas no fuera compatible, póngase en contacto con nosotros y encontraremos una alternativa.

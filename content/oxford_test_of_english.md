@@ -20,7 +20,7 @@ El Rincón de Idiomas realiza convocatorias todos los meses. **Esta prueba se r
 * C1: 190€
 * MÓDULO: 70€
 
-### FECHAS DE LOS EXÁMENES 2024
+### FECHAS DE LOS EXÁMENES 2024 y 2025
 
 Durante los meses de verano puede elegir la fecha y la hora siempre que nos avise con 3 semanas de antelación.
 
@@ -57,6 +57,94 @@ Durante los meses de verano puede elegir la fecha y la hora siempre que nos avis
 * 1﻿6/12.........10.00
 * 20/12........17:00
 
-C﻿uando eliges la fecha por favor avísenos con 3 semanas de antelación.
+  **E﻿NERO**
 
-Si alguna de éstas fechas no fuera compatible, póngase en contacto con nosotros y encontraremos una alternativa.
+  lunes 20 de enero 10:00
+
+  viernes 24 de enero 17:00
+
+  lunes 27 de enero 10:00
+
+  viernes 31 de enero 17:00
+
+  **F﻿EBRERO**
+
+  lunes 3 de febrero 10:00
+
+  viernes 7 de febrero 17:00
+
+  lunes 10 de febrero 10:00
+
+  viernes 14 de febrero 17:00
+
+  lunes 17 de febrero 10:00
+
+  viernes 21 de febrero 17:00
+
+  lunes 24 de febrero 10:00
+
+  viernes 28 de febrero 17:00
+
+  **M﻿ARZO**
+
+  lunes 17 de marzo 10:00
+
+  viernes 21 de marzo 17:00
+
+  lunes 24 de marzo 10:00
+
+  viernes 28 de marzo 17:00
+
+  lunes 31 de marzo 10:00
+
+  **A﻿BRIL**
+
+  viernes 4 de abril 17:00
+
+  lunes 7 de abril 10:00
+
+  viernes 11 de abril 17:00
+
+  viernes 25 de abril 17:00
+
+  **M﻿AYO**
+
+  viernes 2 de mayo 10:00
+
+  lunes 5 de mayo 10:00
+
+  viernes 9 de mayo 17:00
+
+  lunes 12 de mayo 10:00
+
+  viernes 16 de mayo 17:00
+
+  lunes 19 de mayo 10:00
+
+  viernes 23 de mayo 17:00
+
+  lunes 26 de mayo 10:00
+
+  viernes 30 de mayo 17:00
+
+  **J﻿UNIO**
+
+  lunes 2 de junio 10:00
+
+  viernes 6 de junio 17:00
+
+  lunes 9 de junio 10:00
+
+  viernes 13 de junio 17:00
+
+  lunes 16 de junio 10:00
+
+  lunes 23 de junio 10:00
+
+  viernes 27 de junio 17:00
+
+  lunes 30 de junio 10:00
+
+**C﻿uando elijas la fecha, diganos con tres semanas de antelacion.**
+
+**Si alguna de éstas fechas no fuera compatible, póngase en contacto con nosotros y encontraremos una alternativa.**

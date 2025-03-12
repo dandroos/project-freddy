@@ -20,11 +20,12 @@ import { setMobileMenu } from "../redux/actions"
 const Nav = ({ dispatch, isMobile }) => {
   const drawerWidth = 300
 
-  const { title } = useStaticQuery(graphql`
+  const { mob_title } = useStaticQuery(graphql`
     {
       site {
         siteMetadata {
           title
+          mob_title
         }
       }
     }
@@ -55,7 +56,7 @@ const Nav = ({ dispatch, isMobile }) => {
               sx={{ ml: 1 }}
               color="common.white"
             >
-              {title}
+              {mob_title}
             </Typography>
           </Box>
           <Box flexGrow={1} />

@@ -2,8 +2,9 @@ const config = require("./style")
 
 module.exports = {
   siteMetadata: {
-    title: `El Rincón de Idiomas`,
-    description: `El Rincón de Idiomas es una academia de inglés con sede en Fuerteventura. Somos un centro de preparación de exámenes de Cambridge English.`,
+    title: `El Rincón de Idiomas (Academia de Inglés)`,
+    mob_title: `El Rincón de Idiomas`,
+    description: `El Rincón de Idiomas es una academia de inglés con sede en Fuerteventura. Somos un centro de preparación de exámenes de Cambridge English y afiliado con Oxford Test of English.`,
     lang: "en",
     author: `@dandrewsdeveloper`,
     siteUrl: `https://elrincondeidiomas.com/`,

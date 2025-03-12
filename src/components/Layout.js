@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion"
 import { Box, Toolbar, useMediaQuery, useTheme } from "@mui/material"
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import { setIsMobile, setSiteReady } from "../redux/actions"
 
 import BookingFormDialog from "./BookingFormDialog"

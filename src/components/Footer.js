@@ -13,11 +13,11 @@ import React from "react"
 import { connect } from "react-redux"
 
 const Footer = ({ hideMap, isMobile }) => {
-  const { title } = useStaticQuery(graphql`
+  const { mob_title } = useStaticQuery(graphql`
     {
       site {
         siteMetadata {
-          title
+          mob_title
         }
       }
     }
@@ -44,7 +44,7 @@ const Footer = ({ hideMap, isMobile }) => {
               const currentYear = new Date().getFullYear()
               return currentYear === 2022 ? `2022 ` : `2022 - ${currentYear} `
             })()}
-            {title}
+            {mob_title}
           </Typography>
           <Typography variant="caption">
             Sitio web:{" "}

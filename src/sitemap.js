@@ -1,7 +1,7 @@
 export const nav = {
   internal: [
     {
-      label: "Cursos",
+      label: "Cursos de Inglés",
       url: "/cursos",
     },
     {

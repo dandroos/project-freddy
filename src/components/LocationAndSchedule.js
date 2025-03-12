@@ -6,11 +6,11 @@ import React from "react"
 import { connect } from "react-redux"
 
 const LocationAndSchedule = ({ isMobile, footer }) => {
-  const { title } = useStaticQuery(graphql`
+  const { mob_title } = useStaticQuery(graphql`
     {
       site {
         siteMetadata {
-          title
+          mob_title
         }
       }
     }
@@ -44,7 +44,7 @@ const LocationAndSchedule = ({ isMobile, footer }) => {
           }}
         >
           <Box>
-            <Typography variant="h5">{title}</Typography>
+            <Typography variant="h5">{mob_title}</Typography>
             <Typography>Calle Alcades Mayores 1 </Typography>
             <Typography>Local 6</Typography>
             <Typography>Majada Marcial</Typography>

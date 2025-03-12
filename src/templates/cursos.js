@@ -8,7 +8,7 @@ import { graphql } from "gatsby"
 const Cursos = ({ data }) => {
   return (
     <Page
-      title="Cursos"
+      title="Cursos de Inglés"
       image={data.headerImage.childMarkdownRemark.frontmatter.cursos}
     >
       <Clases

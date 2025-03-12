@@ -2,7 +2,6 @@ import {
   Box,
   Button,
   Dialog,
-  DialogActions,
   DialogContent,
   DialogContentText,
   DialogTitle,
@@ -10,7 +9,6 @@ import {
   List,
   ListItem,
   ListItemText,
-  Modal,
   Portal,
 } from "@mui/material"
 import { setClasesDialog } from "../redux/actions"

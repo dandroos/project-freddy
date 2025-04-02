@@ -12,8 +12,8 @@ const Oxford = ({ data }) => {
       title="Oxford Test of English"
       image={data.headerImage.childMarkdownRemark.frontmatter.oxford}
     >
-      <Box mb={2}>
-        <StaticImage src="../images/oxford-test-of-english.png" />
+      <Box maxWidth={450} margin="auto" mb={3}>
+        <StaticImage src="../images/oxford-logo-image.png" />
       </Box>
       <HtmlParser input={data.body.childMarkdownRemark.html} />
     </Page>

@@ -8,57 +8,65 @@ clases:
   - clase:
       name: 1º y 2º INFANTIL
       days: Martes y Jueves
+      time: 15:00 - 15:50
+  - clase:
+      name: 2º y 3º INFANTIL
+      days: Martes y Jueves
       time: 16:00 - 16:50
   - clase:
-      name: 3º INFANTIL
+      name: 1º PRIMARIA
       days: Martes y Jueves
       time: 18:10 - 19:00
   - clase:
-      name: 1º PRIMARIA
+      name: 2º PRIMARIA
       days: Lunes y Miércoles
       time: 16:00 - 16:50
   - clase:
       name: 3º PRIMARIA
-      days: Lunes y Miércoles
-      time: 18:10 - 19:00
-  - clase:
-      name: 4º PRIMARIA
       days: Martes y Jueves
       time: 17:00 - 17:50
   - clase:
-      name: 5º PRIMARIA
+      name: 4º PRIMARIA
       days: Lunes y Miércoles
+      time: 18:10 - 19:00
+  - clase:
+      name: 5º PRIMARIA
+      days: Martes y Jueves
       time: 17:00 - 17:50
   - clase:
       name: 6º PRIMARIA
-      days: Martes y Jueves
-      time: 18:10 - 19:00
-  - clase:
-      name: 1º ESO
-      days: Martes y Jueves
-      time: 16:00 - 16:50
-  - clase:
-      name: 2º ESO
-      days: Lunes y Miércoles
-      time: 16:00 - 16:50
-  - clase:
-      name: 3º ESO
-      days: Martes y Jueves
-      time: 18:10 - 19:00
-  - clase:
-      name: 4º ESO
-      days: Martes y Jueves
-      time: 16:00 - 16:50
-  - clase:
-      name: 1º BACHILLERATO
       days: Lunes y Miércoles
       time: 17:00 - 17:50
   - clase:
-      name: 2º BACHILLERATO
+      name: 1º ESO
+      days: Martes y Jueves
+      time: 18:10 - 19:00
+  - clase:
+      name: 2º ESO
+      days: Martes y Jueves
+      time: 16:00 - 16:50
+  - clase:
+      name: 3º ESO
       days: Lunes y Miércoles
       time: 16:00 - 16:50
   - clase:
-      name: C1
+      name: 4º ESO
+      days: Martes y Jueves
+      time: 18:10 - 19:00
+  - clase:
+      name: 1º BACHILLERATO
+      days: Martes y Jueves
+      time: 16:00 - 16:50
+  - clase:
+      name: 2º BACHILLERATO
+      days: Lunes y Miércoles
+      time: 17:00 - 17:50
+  - clase:
+      name: CLASE DE APOYO (PRIMARIA)
+      days: Lunes y Miércoles
+      time: 16:00 - 16:50
+  - clase:
+      name: CLASE DE APOYO (ESO Y BACHILLERATO)
       days: Lunes y Miércoles
       time: 18:10 - 19:00
   - clase:

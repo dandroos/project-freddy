@@ -176,6 +176,24 @@ collections:
               ]
             editor_components: []
             modes: ["rich_text"]
+      - label: Información
+        name: informacion
+        file: content/informacion.md
+        fields:
+          - label: Body
+            name: body
+            widget: markdown
+            buttons:
+              [
+                "bold",
+                "italic",
+                "heading-one",
+                "heading-two",
+                "bulleted-list",
+                "link",
+              ]
+            editor_components: []
+            modes: ["rich_text"]
   - label: Contact
     name: contact
     editor:

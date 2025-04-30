@@ -1,7 +1,7 @@
 ---
 clases_button_text: Consultar los horarios de todas las clases
 clases_title: Nuestras clases
-clases_intro: Estas son nuestras clases para el año escolar 2024/2025. Por
+clases_intro: Estas son nuestras clases para el año escolar 2025/2026. Por
   favor, póngase en contacto con nosotros para comprobar la disponibilidad.
   Gracias.
 clases:

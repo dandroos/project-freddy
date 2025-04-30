@@ -4,7 +4,8 @@ Los cursos que ofrecemos son de dos días a la semana con una duración de 50 mi
 
 El centro imparte clases mensuales, por hora y online.\
 \
-De infantil a bachillerato 50€ por mes.\
+De infantil a bachillerato 60€ por mes.\
+C﻿lases de apoyo 80€\
 \
 Adultos: Cursos grupales 60€ por mes.\
 Adultos: Clases individuales 20€ la hora.\
@@ -24,7 +25,7 @@ Habrá que realizar el pago de matrícula de 12€ para reservar plaza para el s
 Durante el curso escolar los alumnos trabajaran con libro o material escolar dependiendo del curso a realizar.\
 \
 Alumnos de 3 a 5 años: Material 20€.\
-Alumnos de primaria y ESO: Libro 25€.
+Alumnos de primaria y ESO: Libro 27€.
 
 Alumnos de bachillerato y Adultos: Material 20€.\
 \

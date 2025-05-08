@@ -1,0 +1,3 @@
+## Lingüísticos a Tu Medida
+
+En El Rincón de Idiomas no solo enseñamos idiomas — también ofrecemos servicios profesionales de traducción inglés–español y español–inglés. Con más de 15 años de experiencia, realizamos traducciones precisas y de alta calidad para todo tipo de contenidos: documentos, currículums, menús, redes sociales, materiales de marketing y mucho más. Ya sea un currículum profesional en inglés o contenido adaptado para un público internacional, garantizamos claridad, adecuación cultural y un estilo natural en cada proyecto. Entregas rápidas, precios competitivos y un servicio personalizado en el que puedes confiar.

@@ -20,7 +20,11 @@ const Page = ({ children, isMobile, title, image, noCTA }) => {
   const theme = useTheme()
   return (
     <>
-      <BackgroundImage {...bgImage} placeholder="blurred">
+      <BackgroundImage
+        {...bgImage}
+        placeholder="blurred"
+        alt="El Rincón de Idiomas"
+      >
         <Box width="100%" height={isMobile ? 200 : 400}>
           <Box
             position="absolute"

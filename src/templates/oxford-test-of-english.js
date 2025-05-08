@@ -13,7 +13,10 @@ const Oxford = ({ data }) => {
       image={data.headerImage.childMarkdownRemark.frontmatter.oxford}
     >
       <Box maxWidth={450} margin="auto" mb={3}>
-        <StaticImage src="../images/oxford-logo-image.png" />
+        <StaticImage
+          src="../images/oxford-logo-image.png"
+          alt="Oxford Affiliate logo"
+        />
       </Box>
       <HtmlParser input={data.body.childMarkdownRemark.html} />
     </Page>

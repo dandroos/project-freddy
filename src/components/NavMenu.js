@@ -44,7 +44,6 @@ const NavMenu = ({ dispatch, isMobile }) => {
   const ContactMethod = ({ Icon, primary, secondary, url, phone }) => (
     <ListItemButton
       sx={{ py: 0 }}
-      button
       component="a"
       href={url}
       target="_blank"
@@ -142,6 +141,8 @@ const NavMenu = ({ dispatch, isMobile }) => {
                   sx: {
                     mt: 0,
                     transition: "all .3s",
+                    lineHeight: 0.5,
+                    fontSize: "0.9rem",
                   },
                 }}
               />

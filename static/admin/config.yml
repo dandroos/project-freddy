@@ -194,6 +194,24 @@ collections:
               ]
             editor_components: []
             modes: ["rich_text"]
+      - label: Traducciones
+        name: traducciones
+        file: content/traducciones.md
+        fields:
+          - label: Body
+            name: body
+            widget: markdown
+            buttons:
+              [
+                "bold",
+                "italic",
+                "heading-one",
+                "heading-two",
+                "bulleted-list",
+                "link",
+              ]
+            editor_components: []
+            modes: ["rich_text"]
   - label: Contact
     name: contact
     editor:

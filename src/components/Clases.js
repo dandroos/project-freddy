@@ -25,12 +25,12 @@ const Clases = ({ dispatch, isOpen, classes, text }) => {
       <ListItemText
         primary={<strong>{name}</strong>}
         secondary={
-          <div>
-            <div>{days}</div>
-            <div>
+          <span>
+            <span style={{ display: "block" }}>{days}</span>
+            <span style={{ display: "block" }}>
               <small>{time}</small>
-            </div>
-          </div>
+            </span>
+          </span>
         }
       />
     </ListItem>
@@ -51,18 +51,19 @@ const Clases = ({ dispatch, isOpen, classes, text }) => {
           <DialogContent>
             <DialogContentText>
               <small>{text.clases_intro}</small>
-              <List>
-                {classes.map(({ clase }) => {
-                  return (
-                    <Clase
-                      name={clase.name}
-                      days={clase.days}
-                      time={clase.time}
-                    />
-                  )
-                })}
-              </List>
             </DialogContentText>
+            <List>
+              {classes.map(({ clase }, i) => {
+                return (
+                  <Clase
+                    key={`clase${i}`}
+                    name={clase.name}
+                    days={clase.days}
+                    time={clase.time}
+                  />
+                )
+              })}
+            </List>
           </DialogContent>
         </Dialog>
       </Portal>

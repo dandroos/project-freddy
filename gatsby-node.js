@@ -79,6 +79,14 @@ exports.createPages = async ({ actions }) => {
     },
   })
   createPage({
+    path: "/traducciones",
+    component: path.resolve("src/templates/traducciones.js"),
+    context: {
+      light,
+      dark,
+    },
+  })
+  createPage({
     path: "/contactenos",
     component: path.resolve("src/templates/contactenos.js"),
     context: {

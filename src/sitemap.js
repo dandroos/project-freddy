@@ -24,6 +24,10 @@ export const nav = {
       label: "Cambridge",
       url: "/cambridge",
     },
+    {
+      label: "Traducciones",
+      url: "/traducciones",
+    },
 
     {
       label: "Contáctenos",

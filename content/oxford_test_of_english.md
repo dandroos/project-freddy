@@ -20,58 +20,18 @@ El Rincón de Idiomas realiza convocatorias todos los meses. **Esta prueba se r
 * C1: 190€
 * MÓDULO: 70€
 
-### FECHAS DE LOS EXÁMENES 2024 y 2025
+### FECHAS DE LOS EXÁMENES  2025
 
 Durante los meses de verano puede elegir la fecha y la hora siempre que nos avise con 3 semanas de antelación.
 
-  **A﻿BRIL**
-
-  viernes 4 de abril 17:00
-
-  lunes 7 de abril 10:00
-
-  viernes 11 de abril 17:00
-
-  viernes 25 de abril 17:00
-
-  **M﻿AYO**
-
-  viernes 2 de mayo 10:00
-
-  lunes 5 de mayo 10:00
-
-  viernes 9 de mayo 17:00
-
-  lunes 12 de mayo 10:00
-
-  viernes 16 de mayo 17:00
-
-  lunes 19 de mayo 10:00
-
-  viernes 23 de mayo 17:00
-
-  lunes 26 de mayo 10:00
-
-  viernes 30 de mayo 17:00
-
-  **J﻿UNIO**
-
-  lunes 2 de junio 10:00
-
-  viernes 6 de junio 17:00
-
-  lunes 9 de junio 10:00
-
-  viernes 13 de junio 17:00
-
-  lunes 16 de junio 10:00
-
-  lunes 23 de junio 10:00
-
-  viernes 27 de junio 17:00
-
-  lunes 30 de junio 10:00
-
-**C﻿uando elijas la fecha, diganos con tres semanas de antelacion.**
-
 **Si alguna de éstas fechas no fuera compatible, póngase en contacto con nosotros y encontraremos una alternativa.**
+
+**C﻿uando elijas tu fecha de examen, necesitamos al menos 3 semanas de antelación.**
+
+**Horarios de Exámenes 2025**
+
+🗓 De lunes a jueves – ⏰ 10:00 h
+
+🗓 Viernes – ⏰ 17:00 h
+
+📍 Los exámenes se celebran todas las semanas, durante todo el año.

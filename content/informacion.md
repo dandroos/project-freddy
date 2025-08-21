@@ -24,11 +24,10 @@ Habrá que realizar el pago de matrícula de 10€ para reservar plaza para el s
 
 Durante el curso escolar los alumnos trabajaran con libro o material escolar dependiendo del curso a realizar.\
 \
-Alumnos de 3 a 5 años: Material 20€.\
-Alumnos de primaria y ESO: Libro 27€.
+Alumnos de 3 a 5 años: Material 25€.\
+Alumnos de primaria,: Libro 27€. ESO y Bachillerato 27€
 
-Alumnos de bachillerato y Adultos: Material 20€.\
-\
+Adultos: Material 25€.\
 Estos pagos se realizaran a principio de curso.
 
 # Calendario

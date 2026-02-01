@@ -22,10 +22,10 @@ L﻿a duración total del examen es de aproximadamente 2 horas y el certificado 
 
 ### Precios
 
-* A2: 140€
-* B1: 140€
-* B2: 170€
-* C1: 190€
+* A2: 150€
+* B1: 150€
+* B2: 150€
+* C1: 180€
 * MÓDULO: 70€
 
 ### FECHAS DE LOS EXÁMENES  2026

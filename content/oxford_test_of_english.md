@@ -8,9 +8,17 @@ La valoración de los 4 módulos determinará tú nota final. Si hubiese algún 
 
 ## ¿Cómo es el test de inglés de Oxford en Fuerteventura?
 
-El Rincón de Idiomas realiza convocatorias todos los meses. **Esta prueba se realiza de manera 100 % online e incluye la evaluación de 4 habilidades : Reading, Listening, Writing y Speaking**.En cuanto a la nota final, esta se compone del **promedio de las 4 habilidades mencionadas**. Si el candidato no alcanza el nivel deseado puede volver a realizar sólo la parte del exámen a la que no haya llegado a su calificación. En total, **el test completo requiere de 2 horas y el certificado se obtiene después de 14 días**.
+El Rincón de Idiomas  organiza convocatorias todos los meses. 
 
-**Convocatorias todos los meses**
+E l examen se realiza de forma 100€ online e incluye la evaluación de cuatro habilidades **: Reading, Listening, Writing y Speaking**.
+
+L﻿a nota final se obtiene a partir del promedio de las cuatro destrezas. 
+
+Si el candidato no alcanza el nivel deseado podrá repitir únicamente la parte del examen en la que no haya obtenido la calificación necesaria.
+
+L﻿a duración total del examen es de aproximadamente 2 horas y el certificado oficial se recibe en un plazo de hasta 14 días..
+
+**Convocatorias disponibles todos los meses.**
 
 ### Precios
 
@@ -20,13 +28,13 @@ El Rincón de Idiomas realiza convocatorias todos los meses. **Esta prueba se r
 * C1: 190€
 * MÓDULO: 70€
 
-### FECHAS DE LOS EXÁMENES  2025
+### FECHAS DE LOS EXÁMENES  2026
 
-Durante los meses de verano puede elegir la fecha y la hora siempre que nos avise con 3 semanas de antelación.
+Durante los meses de verano, el candidato puede elegir la fecha y la hora del examen, siempre que nos avise con al menos 3 semanas de antelación.
 
-**Si alguna de éstas fechas no fuera compatible, póngase en contacto con nosotros y encontraremos una alternativa.**
+**Si alguna de las fechas no fuera compatible, póngase en contacto con nosotros y buscaremos una alternativa.**
 
-**C﻿uando elijas tu fecha de examen, necesitamos al menos 3 semanas de antelación.**
+**P﻿ara cualquier convocatoria, es imprescindible avisar con un mínimo de 3 semanas de antelación.**
 
 **Horarios de Exámenes 2025**
 

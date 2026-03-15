@@ -43,19 +43,19 @@ Toda esta gama de exámenes, con sus tres versiones, ayudan a los niños a inici
 
 ## Precios
 
-* STARTERS: 74€
-* MOVERS: 81€
-* FLYERS: 85€
-* KET & KETs: 110€
-* PET & PETs: 121€
-* FCE & FCEs: 205€
-* CAE: C1 224€
-* CPE: C2 220€
+* STARTERS: 77€
+* MOVERS: 84€
+* FLYERS: 88€
+* KET & KETs: 119€
+* PET & PETs: 131€
+* FCE & FCEs: 216€
+* CAE: C1 22€6
+* CPE: €
 
-## Convocatorias de Cambridge en Fuerteventura 2025
+## Convocatorias de Cambridge en Fuerteventura 2026
 
-* STARTERS, MOVERS y FLYERS: 22 de Junio de 2025
-* KET/KETs A2: 21 de Junio de 2025 
-* PET/PETs B1: 21 de Junio de 2025
-* FCE/FCEs B2: 21 de Junio de 2025
-* CAE C1: 21 de junio de 2025
+* STARTERS, MOVERS y FLYERS: 21 de Junio de 2026
+* KET/KETs A2: 20 de Junio de 2026 
+* PET/PETs B1: 20 de Junio de 2026
+* FCE/FCEs B2: 20 de Junio de 2026
+* CAE C1: 20 de junio de 2026

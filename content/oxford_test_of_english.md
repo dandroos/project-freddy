@@ -36,7 +36,7 @@ Durante los meses de verano, el candidato puede elegir la fecha y la hora del ex
 
 **P﻿ara cualquier convocatoria, es imprescindible avisar con un mínimo de 3 semanas de antelación.**
 
-**Horarios de Exámenes 2025**
+**Horarios de Exámenes 2026**
 
 🗓 De lunes a jueves – ⏰ 10:00 h
 

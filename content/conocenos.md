@@ -1,13 +1,19 @@
-Profesorado exclusivamente nativo.
+Conócenos: 10 años de pasión por los idiomas en Puerto del Rosario
 
-Tenemos amplia experiencia en la enseñanza de idiomas para niños, adolescentes y adultos. 
+Profesorado 100% nativo y con experiencia
 
-El Rincón de Idiomas abrió sus puertas en 2016 dirigido por Jo Bowker, nativa de Manchester, Untied Kingdom.
+En El Rincón de Idiomas creemos que la mejor manera de dominar un idioma es viviéndolo. Por eso, nuestro equipo está compuesto exclusivamente por profesorado nativo de diferentes regiones del Reino Unido y de Estados Unidos.
 
-Somos una academia que se ha estabilizado en el barrio de Majada Marcial en Puerto del Rosario.
+Contamos con una amplia experiencia en la enseñanza de idiomas para niños, adolescentes y adultos, adaptándonos al ritmo y las necesidades de cada alumno.
 
-Trabajamos con profesorado nativo de Reino Unido y Estados Unidos, con experiencia demostrada.     
+Nuestra historia: Una década arraigados en Majada Marcial
 
-Siendo nativos garantizamos el aprendizaje y mejora de las habilidades lingüísticas y también el conocimiento de otra cultura.
+Este año celebramos nuestro 10.º aniversario. Abrimos nuestras puertas en 2016 bajo la dirección de Jo Bowker, nativa de Mánchester (Reino Unido). Desde entonces, nos hemos consolidado como la academia de referencia en el barrio de Majada Marcial, en Puerto del Rosario, creando un espacio de aprendizaje cercano, familiar y de confianza para toda la comunidad.
 
-Somos de diferentes lugares de Reino Unido y Estados Unidos por lo que tenemos  diferentes acentos que ayudan al mejor entendimiento del inglés y la cultura de nuestros países, que estamos orgullosos de compartir.
+¿Por qué elegir profesores nativos?
+
+Inmersión lingüística real: Aprender con docentes nativos te garantiza no solo perfeccionar tu gramática y pronunciación, sino también sumergirte de lleno en la cultura y las expresiones cotidianas de nuestros países de origen.
+
+Variedad de acentos: Al contar con profesores de distintas zonas del Reino Unido y EE. UU., nuestros alumnos se exponen a diferentes acentos reales. Esto entrena el oído de forma natural, facilitando una comprensión del inglés mucho más global y preparándote para el mundo real.
+
+¡Ven a conocernos a Majada Marcial y celebra con nosotros diez años impulsando tu futuro!
